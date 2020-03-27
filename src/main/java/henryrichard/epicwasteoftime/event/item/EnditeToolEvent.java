@@ -2,11 +2,10 @@ package henryrichard.epicwasteoftime.event.item;
 
 import henryrichard.epicwasteoftime.EwotMain;
 import henryrichard.epicwasteoftime.item.tool.IEnditeTool;
-import henryrichard.epicwasteoftime.item.weapon.EnditeSwordItem;
-import henryrichard.epicwasteoftime.item.weapon.SwordItem;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.SwordItem;
 import net.minecraft.item.TieredItem;
 import net.minecraft.util.EntityDamageSource;
 import net.minecraft.world.dimension.DimensionType;

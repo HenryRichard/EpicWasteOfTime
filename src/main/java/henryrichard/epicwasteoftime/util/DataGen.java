@@ -26,7 +26,7 @@ public abstract class DataGen {
     @SubscribeEvent
     public static void gatherData(GatherDataEvent event) {
         DataGenerator generator = event.getGenerator();
-        generator.addProvider(new Recipes(generator));
+        //generator.addProvider(new Recipes(generator));
     }
 
     private static class Recipes extends RecipeProvider {

@@ -1,0 +1,8 @@
+{
+    "parent": "block/slab",
+    "textures": {
+        "bottom": "epicwasteoftime:block/lavaleaf_planks",
+        "top": "epicwasteoftime:block/lavaleaf_planks",
+        "side": "epicwasteoftime:block/lavaleaf_planks"
+    }
+}

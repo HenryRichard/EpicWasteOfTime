@@ -63,6 +63,7 @@ public class SlimeOreBlock extends Block {
                     entity.spawnExplosionParticle();
                 } else {
                     //get entity drops and spawn them in instead
+                    //TODO: this doesn't quite work as intended; looting doesn't work
                     if(world.getServer() != null) {
                         int fortuneLevel = EnchantmentHelper.getEnchantmentLevel(Enchantments.FORTUNE, stack);
                         ItemStack weapon = new ItemStack(Items.IRON_SWORD);

@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "type=bottom": { "model": "epicwasteoftime:block/lavaleaf_slab" },
+    "type=top": { "model": "epicwasteoftime:block/lavaleaf_slab_top" },
+    "type=double": { "model": "epicwasteoftime:block/lavaleaf_planks" }
+  }
+}
