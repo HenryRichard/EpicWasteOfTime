@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "epicwasteoftime:tools/iron/iron_spadaxe_from_pickaxe_and_shovel"
+    ]
+  },
+  "criteria": {
+    "has_iron_ingot": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "tag": "forge:ingots/iron"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "epicwasteoftime:tools/iron/iron_spadaxe_from_pickaxe_and_shovel"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_iron_ingot",
+      "has_the_recipe"
+    ]
+  ]
+}

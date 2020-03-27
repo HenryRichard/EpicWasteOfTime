@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XX",
+    "XT"
+  ],
+  "key": {
+    "X": {
+      "item": "minecraft:snow_block"
+    },
+    "T": {
+      "item": "epicwasteoftime:snow_hoe"
+    }
+  },
+  "result": {
+    "item": "epicwasteoftime:snow_mattock"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "tag": "forge:ores/endust"
+  },
+  "result": "epicwasteoftime:endust",
+  "experience": 1.0,
+  "cookingtime": 200
+}

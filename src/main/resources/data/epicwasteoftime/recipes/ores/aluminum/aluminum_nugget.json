@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    [
+      {
+        "tag": "forge:ingots/aluminum"
+      },
+      {
+        "tag": "forge:ingots/aluminium"
+      }
+    ]
+  ],
+  "result": {
+    "item": "epicwasteoftime:aluminum_nugget",
+    "count": 9
+  }
+}

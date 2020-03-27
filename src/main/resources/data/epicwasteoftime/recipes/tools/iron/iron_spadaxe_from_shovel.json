@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    " T "
+  ],
+  "key": {
+    "X": {
+      "tag": "forge:ingots/iron"
+    },
+    "T": {
+      "item": "minecraft:iron_shovel"
+    }
+  },
+  "result": {
+    "item": "epicwasteoftime:iron_spadaxe"
+  }
+}

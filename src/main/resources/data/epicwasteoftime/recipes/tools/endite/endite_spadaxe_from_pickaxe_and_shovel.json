@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "epicwasteoftime:endite_pickaxe"
+    },
+    {
+      "item": "epicwasteoftime:endite_shovel"
+    }
+  ],
+  "result": {
+    "item": "epicwasteoftime:endite_spadaxe"
+  }
+}

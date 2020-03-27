@@ -1,0 +1,6 @@
+{
+    "variants": {
+        "powered=false": { "model": "epicwasteoftime:block/pinkite_block" },
+        "powered=true": { "model": "epicwasteoftime:block/pinkite_block_powered" }
+    }
+}

@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "planks",
+  "ingredients": [
+    {
+      "tag": "epicwasteoftime:lavaleaf_logs"
+    }
+  ],
+  "result": {
+    "item": "epicwasteoftime:lavaleaf_planks",
+    "count": 4
+  }
+}

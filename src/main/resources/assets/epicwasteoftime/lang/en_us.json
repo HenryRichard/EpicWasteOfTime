@@ -1,0 +1,192 @@
+{
+  "block.epicwasteoftime.amethyst_ore": "Amethyst Ore",
+  "block.epicwasteoftime.endust_ore": "Endust Ore",
+  "block.epicwasteoftime.flint_ore": "Flint Ore",
+  "block.epicwasteoftime.aluminum_ore": "Aluminum Ore",
+  "block.epicwasteoftime.pinkite_ore": "Pinkite Ore",
+  "block.epicwasteoftime.slime_ore": "Slime Ore",
+
+  "block.epicwasteoftime.amethyst_block": "Block of Amethyst",
+  "block.epicwasteoftime.endust_block": "Block of Endust",
+  "block.epicwasteoftime.aluminum_block": "Block of Aluminum",
+  "block.epicwasteoftime.pinkite_block": "Block of Pinkite",
+  "block.epicwasteoftime.unalloyed_endite_block": "Block of an Alloy of Dubious Quality",
+  "block.epicwasteoftime.endite_block": "Block of Endite",
+
+  "block.epicwasteoftime.lavaleaf_log": "Lavaleaf Log",
+  "block.epicwasteoftime.stripped_lavaleaf_log": "Stripped Lavaleaf Log",
+  "block.epicwasteoftime.lavaleaf_wood": "Lavaleaf Wood",
+  "block.epicwasteoftime.stripped_lavaleaf_wood": "Stripped Lavaleaf Wood",
+  "block.epicwasteoftime.lavaleaf_planks": "Lavaleaf Planks",
+  "block.epicwasteoftime.lavaleaf_slab": "Lavaleaf Slab",
+  "block.epicwasteoftime.lavaleaf_stairs": "Lavaleaf Stairs",
+  "block.epicwasteoftime.lavaleaves": "Lavaleaves",
+  "block.epicwasteoftime.lavalogged_lavaleaves": "Lavalogged Lavaleaves",
+  "block.epicwasteoftime.lavaleaf_sapling": "Lavaleaf Sapling",
+
+  "block.epicwasteoftime.glowwool": "Glowwool",
+  "block.epicwasteoftime.glowwool_carpet": "Glowwool Carpet",
+  "block.epicwasteoftime.jeb_wool": "jeb_ Wool",
+  "block.epicwasteoftime.jeb_carpet": "jeb_ Carpet",
+
+  "block.epicwasteoftime.fake_anvil": "Fake Anvil",
+
+
+
+  "item.epicwasteoftime.amethyst": "Amethyst",
+  "item.epicwasteoftime.amethyst_shard": "Amethyst Shard",
+  "item.epicwasteoftime.aluminum_ingot": "Aluminum Ingot",
+  "item.epicwasteoftime.aluminum_nugget": "Aluminum Nugget",
+  "item.epicwasteoftime.pinkite_ingot": "Pinkite Ingot",
+  "item.epicwasteoftime.pinkite_nugget": "Pinkite Nugget",
+  "item.epicwasteoftime.unalloyed_endite_ingot": "Ingot of an Alloy of Dubious Quality",
+  "item.epicwasteoftime.endite_ingot": "Endite Ingot",
+  "item.epicwasteoftime.endite_nugget": "Endite Nugget",
+  "item.epicwasteoftime.endust": "Endust",
+
+  "item.epicwasteoftime.iron_chainmail": "Iron Chainmail",
+  "item.epicwasteoftime.golden_chainmail": "Golden Chainmail",
+  "item.epicwasteoftime.endite_chainmail": "Endite Chainmail",
+  "item.epicwasteoftime.pinkite_chainmail": "Pinkite Chainmail",
+
+  "item.epicwasteoftime.zwammah_head": "Zwammah Head",
+  "item.epicwasteoftime.zwammah_rod": "Zwammah Rod",
+  "item.epicwasteoftime.zwammah_hilt": "Zwammah Hilt",
+
+
+
+  "item.epicwasteoftime.amethyst_helmet": "Amethyst Helmet",
+  "item.epicwasteoftime.amethyst_chestplate": "Amethyst Chestplate",
+  "item.epicwasteoftime.amethyst_leggings": "Amethyst Leggings",
+  "item.epicwasteoftime.amethyst_boots": "Amethyst Boots",
+
+  "item.epicwasteoftime.ancient_amethyst_crown": "Ancient Amethyst Crown",
+  "item.epicwasteoftime.ancient_amethyst_chestplate": "Ancient Amethyst Chainmail Chestplate",
+  "item.epicwasteoftime.ancient_amethyst_leggings": "Ancient Amethyst Chainmail Leggings",
+  "item.epicwasteoftime.ancient_amethyst_boots": "Ancient Amethyst Chainmail Boots",
+
+  "item.epicwasteoftime.golden_chainmail_helmet": "Golden Chainmail Helmet",
+  "item.epicwasteoftime.golden_chainmail_chestplate": "Golden Chainmail Chestplate",
+  "item.epicwasteoftime.golden_chainmail_leggings": "Golden Chainmail Leggings",
+  "item.epicwasteoftime.golden_chainmail_boots": "Golden Chainmail Boots",
+
+  "item.epicwasteoftime.pinkite_helmet": "Pinkite Helmet",
+  "item.epicwasteoftime.pinkite_chestplate": "Pinkite Chestplate",
+  "item.epicwasteoftime.pinkite_leggings": "Pinkite Leggings",
+  "item.epicwasteoftime.pinkite_boots": "Pinkite Boots",
+
+  "item.epicwasteoftime.pinkite_chainmail_helmet": "Pinkite Chainmail Helmet",
+  "item.epicwasteoftime.pinkite_chainmail_chestplate": "Pinkite Chainmail Chestplate",
+  "item.epicwasteoftime.pinkite_chainmail_leggings": "Pinkite Chainmail Leggings",
+  "item.epicwasteoftime.pinkite_chainmail_boots": "Pinkite Chainmail Boots",
+
+  "item.epicwasteoftime.endite_helmet": "Endite Helmet",
+  "item.epicwasteoftime.endite_chestplate": "Endite Chestplate",
+  "item.epicwasteoftime.endite_leggings": "Endite Leggings",
+  "item.epicwasteoftime.endite_boots": "Endite Boots",
+
+  "item.epicwasteoftime.endite_chainmail_helmet": "Endite Chainmail Helmet",
+  "item.epicwasteoftime.endite_chainmail_chestplate": "Endite Chainmail Chestplate",
+  "item.epicwasteoftime.endite_chainmail_leggings": "Endite Chainmail Leggings",
+  "item.epicwasteoftime.endite_chainmail_boots": "Endite Chainmail Boots",
+
+  "item.epicwasteoftime.endite_armor.desc": "(Roughly) four times as protective in The End!",
+
+  "item.epicwasteoftime.exploding_pants": "Exploding Pants",
+
+  "item.epicwasteoftime.legendary_amethyst_super_pants": "Legendary Amethyst Super Pants",
+  "item.epicwasteoftime.legendary_amethyst_super_pants.desc": "Aww, that's rad!",
+
+
+
+  "item.epicwasteoftime.golden_bow": "Golden Bow",
+
+  "item.epicwasteoftime.amethyst_sword": "Amethyst Sword",
+  "item.epicwasteoftime.amethyst_shovel": "Amethyst Shovel",
+  "item.epicwasteoftime.amethyst_pickaxe": "Amethyst Pickaxe",
+  "item.epicwasteoftime.amethyst_axe": "Amethyst Axe",
+  "item.epicwasteoftime.amethyst_hoe": "Amethyst Hoe",
+  "item.epicwasteoftime.amethyst_spadaxe": "Amethyst Spadaxe",
+  "item.epicwasteoftime.amethyst_mattock": "Amethyst Mattock",
+
+  "item.epicwasteoftime.pinkite_sword": "Pinkite Sword",
+  "item.epicwasteoftime.pinkite_shovel": "Pinkite Shovel",
+  "item.epicwasteoftime.pinkite_pickaxe": "Pinkite Pickaxe",
+  "item.epicwasteoftime.pinkite_axe": "Pinkite Axe",
+  "item.epicwasteoftime.pinkite_hoe": "Pinkite Hoe",
+  "item.epicwasteoftime.pinkite_spadaxe": "Pinkite Spadaxe",
+  "item.epicwasteoftime.pinkite_mattock": "Pinkite Mattock",
+
+  "item.epicwasteoftime.snow_sword": "Snow Sword",
+  "item.epicwasteoftime.snow_shovel": "Snow Shovel",
+  "item.epicwasteoftime.snow_pickaxe": "Snow Pickaxe",
+  "item.epicwasteoftime.snow_axe": "Snow Axe",
+  "item.epicwasteoftime.snow_hoe": "Snow Hoe",
+  "item.epicwasteoftime.snow_spadaxe": "Snow Spadaxe",
+  "item.epicwasteoftime.snow_mattock": "Snow Mattock",
+
+  "item.epicwasteoftime.endite_sword": "Endite Sword",
+  "item.epicwasteoftime.endite_shovel": "Endite Shovel",
+  "item.epicwasteoftime.endite_pickaxe": "Endite Pickaxe",
+  "item.epicwasteoftime.endite_axe": "Endite Axe",
+  "item.epicwasteoftime.endite_hoe": "Endite Hoe",
+  "item.epicwasteoftime.endite_spadaxe": "Endite Spadaxe",
+  "item.epicwasteoftime.endite_mattock": "Endite Mattock",
+  "item.epicwasteoftime.endite_tool.desc": "Breaks blocks four times as quickly in The End!",
+  "item.epicwasteoftime.endite_weapon.desc": "Deals four times as much damage in The End!",
+
+  "item.epicwasteoftime.wooden_spadaxe": "Wooden Spadaxe",
+  "item.epicwasteoftime.wooden_mattock": "Wooden Mattock",
+
+  "item.epicwasteoftime.stone_spadaxe": "Stone Spadaxe",
+  "item.epicwasteoftime.stone_mattock": "Stone Mattock",
+
+  "item.epicwasteoftime.iron_spadaxe": "Iron Spadaxe",
+  "item.epicwasteoftime.iron_mattock": "Iron Mattock",
+
+  "item.epicwasteoftime.golden_spadaxe": "Golden Spadaxe",
+  "item.epicwasteoftime.golden_mattock": "Golden Mattock",
+
+  "item.epicwasteoftime.diamond_spadaxe": "Diamond Spadaxe",
+  "item.epicwasteoftime.diamond_mattock": "Diamond Mattock",
+
+  "item.epicwasteoftime.book_of_teleportation": "Book of Teleportation",
+  "item.epicwasteoftime.book_of_teleportation.desc.1": "This intra-dimensional device has been proven to be completely safe.",
+  "item.epicwasteoftime.book_of_teleportation.desc.2": "The pearls, however, have not.",
+
+  "item.epicwasteoftime.zwammah": "The Zwammah",
+  "item.epicwasteoftime.zwammah.desc.1": "One hammer to rule them all",
+  "item.epicwasteoftime.zwammah.desc.2": "One hammer to find them",
+  "item.epicwasteoftime.zwammah.desc.3": "One hammer to bring them all",
+  "item.epicwasteoftime.zwammah.desc.4": "And in the darkness bind them",
+  "item.epicwasteoftime.zwammah.desc.5": "In the land of %s where shadows lie",
+
+
+
+  "entity.epicwasteoftime.nether_creeper": "Nether Creeper",
+
+
+
+  "effect.epicwasteoftime.vertigo": "Vertigo",
+  "item.minecraft.potion.effect.epicwasteoftime.vertigo": "Potion of Vertigo",
+  "item.minecraft.splash_potion.effect.epicwasteoftime.vertigo": "Splash Potion of Vertigo",
+  "item.minecraft.tipped_arrow.effect.epicwasteoftime.vertigo": "Arrow of Vertigo",
+  "item.minecraft.lingering_potion.effect.epicwasteoftime.vertigo": "Lingering Potion of Vertigo",
+
+  "item.minecraft.potion.effect.epicwasteoftime.extreme_nausea": "Potion of Extreme Nausea",
+  "item.minecraft.splash_potion.effect.epicwasteoftime.extreme_nausea": "Splash Potion of Extreme Nausea",
+  "item.minecraft.tipped_arrow.effect.epicwasteoftime.extreme_nausea": "Arrow of Extreme Nausea",
+  "item.minecraft.lingering_potion.effect.epicwasteoftime.extreme_nausea": "Lingering Potion of Extreme Nausea",
+
+
+
+  "enchantment.epicwasteoftime.uplifting": "Uplifting",
+  "enchantment.epicwasteoftime.blunt_curse": "Curse of Bluntness",
+
+
+
+  "itemGroup.epicwasteoftime.blocks": "Epic Waste of Time Blocks",
+  "itemGroup.epicwasteoftime.items": "Epic Waste of Time Items",
+  "itemGroup.epicwasteoftime.tools": "Epic Waste of Time Tools",
+  "itemGroup.epicwasteoftime.armor": "Epic Waste of Time Armor"
+}

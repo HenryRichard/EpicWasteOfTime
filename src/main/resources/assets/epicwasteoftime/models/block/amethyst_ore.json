@@ -1,0 +1,7 @@
+{   "parent": "epicwasteoftime:block/overlay_ore",
+    "textures": {
+        "particle": "minecraft:block/netherrack",
+        "base": "minecraft:block/netherrack",
+        "overlay": "epicwasteoftime:block/amethyst_ore"
+    }
+}

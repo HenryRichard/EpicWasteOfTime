@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XX",
+    " T"
+  ],
+  "key": {
+    "X": {
+      "tag": "forge:gems/amethyst"
+    },
+    "T": {
+      "item": "epicwasteoftime:amethyst_axe"
+    }
+  },
+  "result": {
+    "item": "epicwasteoftime:amethyst_mattock"
+  }
+}

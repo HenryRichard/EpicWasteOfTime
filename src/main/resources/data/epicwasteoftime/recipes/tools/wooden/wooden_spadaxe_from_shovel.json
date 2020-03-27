@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    " T "
+  ],
+  "key": {
+    "X": {
+      "tag": "minecraft:planks"
+    },
+    "T": {
+      "item": "minecraft:wooden_shovel"
+    }
+  },
+  "result": {
+    "item": "epicwasteoftime:wooden_spadaxe"
+  }
+}

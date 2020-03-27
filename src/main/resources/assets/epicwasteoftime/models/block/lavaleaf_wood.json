@@ -1,0 +1,7 @@
+{
+    "parent": "block/cube_column",
+    "textures": {
+        "end": "epicwasteoftime:block/lavaleaf_log",
+        "side": "epicwasteoftime:block/lavaleaf_log"
+    }
+}

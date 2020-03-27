@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "wooden_slab",
+  "pattern": [
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "epicwasteoftime:lavaleaf_planks"
+    }
+  },
+  "result": {
+    "item": "epicwasteoftime:lavaleaf_slab",
+    "count": 6
+  }
+}

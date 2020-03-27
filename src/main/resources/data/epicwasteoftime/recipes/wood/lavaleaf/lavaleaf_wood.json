@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "bark",
+  "pattern": [
+    "##",
+    "##"
+  ],
+  "key": {
+    "#": {
+      "item": "epicwasteoftime:lavaleaf_log"
+    }
+  },
+  "result": {
+    "item": "epicwasteoftime:lavaleaf_wood",
+    "count": 3
+  }
+}

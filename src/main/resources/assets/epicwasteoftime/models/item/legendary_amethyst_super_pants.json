@@ -1,0 +1,6 @@
+{
+    "parent":"item/generated",
+    "textures": {
+        "layer0":"epicwasteoftime:item/legendary_amethyst_super_pants"
+    }
+}

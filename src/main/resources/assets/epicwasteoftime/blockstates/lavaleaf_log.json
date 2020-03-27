@@ -1,0 +1,7 @@
+{
+    "variants": {
+        "axis=y":  { "model": "epicwasteoftime:block/lavaleaf_log" },
+        "axis=z":   { "model": "epicwasteoftime:block/lavaleaf_log", "x": 90 },
+        "axis=x":   { "model": "epicwasteoftime:block/lavaleaf_log", "x": 90, "y": 90 }
+    }
+}

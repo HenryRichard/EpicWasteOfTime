@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "X",
+    "#",
+    "#"
+  ],
+  "key": {
+    "X": {
+      "tag": "forge:ingots/endite"
+    },
+    "#": {
+      "tag": "forge:rods/wooden"
+    }
+  },
+  "result": {
+    "item": "epicwasteoftime:endite_shovel"
+  }
+}

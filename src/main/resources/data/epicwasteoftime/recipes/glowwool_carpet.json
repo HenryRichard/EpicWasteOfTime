@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "carpet",
+  "pattern": [
+    "##"
+  ],
+  "key": {
+    "#": {
+      "item": "epicwasteoftime:glowwool"
+    }
+  },
+  "result": {
+    "item": "epicwasteoftime:glowwool_carpet",
+    "count": 3
+  }
+}

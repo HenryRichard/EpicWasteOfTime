@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": [
+    {
+      "tag": "forge:ores/aluminum"
+    },
+    {
+      "tag": "forge:ores/aluminium"
+    }
+  ],
+  "result": "epicwasteoftime:aluminum_ingot",
+  "experience": 1.0,
+  "cookingtime": 100
+}

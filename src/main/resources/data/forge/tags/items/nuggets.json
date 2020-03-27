@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "#forge:nuggets/amethyst",
+    "#forge:nuggets/aluminum",
+    "#forge:nuggets/aluminium",
+    "#forge:nuggets/pinkite",
+    "#forge:nuggets/endite"
+  ]
+}

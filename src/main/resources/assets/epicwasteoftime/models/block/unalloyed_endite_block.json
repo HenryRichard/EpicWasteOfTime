@@ -1,0 +1,5 @@
+{   "parent": "block/cube_all",
+    "textures": {
+        "all": "epicwasteoftime:block/unalloyed_endite_block"
+    }
+}

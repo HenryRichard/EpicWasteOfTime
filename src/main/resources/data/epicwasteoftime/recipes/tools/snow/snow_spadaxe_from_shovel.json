@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    " T "
+  ],
+  "key": {
+    "X": {
+      "item": "minecraft:snow_block"
+    },
+    "T": {
+      "item": "epicwasteoftime:snow_shovel"
+    }
+  },
+  "result": {
+    "item": "epicwasteoftime:snow_spadaxe"
+  }
+}

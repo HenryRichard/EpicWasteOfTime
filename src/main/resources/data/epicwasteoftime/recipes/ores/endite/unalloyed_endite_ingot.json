@@ -1,0 +1,35 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "tag": "forge:ingots/pinkite"
+    },
+    {
+      "tag": "forge:ingots/gold"
+    },
+    {
+      "tag": "forge:ingots/iron"
+    },
+    {
+      "tag": "forge:dusts/endust"
+    },
+    {
+      "tag": "forge:dusts/endust"
+    },
+    {
+      "tag": "forge:dusts/endust"
+    },
+    {
+      "tag": "forge:dusts/endust"
+    },
+    {
+      "tag": "forge:dusts/endust"
+    },
+    {
+      "tag": "forge:dusts/endust"
+    }
+  ],
+  "result": {
+    "item": "epicwasteoftime:unalloyed_endite_ingot"
+  }
+}

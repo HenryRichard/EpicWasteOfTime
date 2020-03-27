@@ -1,0 +1,41 @@
+{
+  "type": "minecraft:chest",
+  "pools": [
+    {
+      "rolls": 1,
+      "conditions": [
+        {
+          "condition": "minecraft:random_chance",
+          "chance": 0.05
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "weight": 1,
+          "name": "epicwasteoftime:ancient_amethyst_crown"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 1,
+          "name": "epicwasteoftime:ancient_amethyst_chestplate"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 1,
+          "name": "epicwasteoftime:ancient_amethyst_leggings"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 1,
+          "name": "epicwasteoftime:ancient_amethyst_boots"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 1,
+          "name": "epicwasteoftime:legendary_amethyst_super_pants"
+        }
+      ]
+    }
+  ]
+}

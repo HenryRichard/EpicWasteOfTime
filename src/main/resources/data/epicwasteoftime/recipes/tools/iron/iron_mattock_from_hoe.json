@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XX",
+    "XT"
+  ],
+  "key": {
+    "X": {
+      "tag": "forge:ingots/iron"
+    },
+    "T": {
+      "item": "minecraft:iron_hoe"
+    }
+  },
+  "result": {
+    "item": "epicwasteoftime:iron_mattock"
+  }
+}

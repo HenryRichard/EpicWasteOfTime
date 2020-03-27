@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "wooden_stairs",
+  "pattern": [
+    "#  ",
+    "## ",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "epicwasteoftime:lavaleaf_planks"
+    }
+  },
+  "result": {
+    "item": "epicwasteoftime:lavaleaf_stairs",
+    "count": 4
+  }
+}

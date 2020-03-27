@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": {
+    "tag": "forge:ingots/unalloyed_endite"
+  },
+  "result": "epicwasteoftime:endite_ingot",
+  "experience": 1.0,
+  "cookingtime": 200
+}

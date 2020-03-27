@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "epicwasteoftime:tools/wooden/wooden_spadaxe_from_pickaxe_and_shovel"
+    ]
+  },
+  "criteria": {
+    "has_stick": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "tag": "forge:rods/wooden"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "epicwasteoftime:tools/wooden/wooden_spadaxe_from_pickaxe_and_shovel"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_stick",
+      "has_the_recipe"
+    ]
+  ]
+}

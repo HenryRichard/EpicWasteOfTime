@@ -1,0 +1,12 @@
+{
+  "replace": false,
+  "values": [
+    "#forge:storage_blocks/amethyst",
+    "#forge:storage_blocks/aluminum",
+    "#forge:storage_blocks/aluminium",
+    "#forge:storage_blocks/pinkite",
+    "#forge:storage_blocks/endite",
+    "#forge:storage_blocks/unalloyed_endite",
+    "#forge:storage_blocks/endust"
+  ]
+}

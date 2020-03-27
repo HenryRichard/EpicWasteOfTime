@@ -1,0 +1,7 @@
+{
+    "parent": "block/carpet",
+    "textures": {
+        "particle": "epicwasteoftime:block/jeb_wool",
+        "wool": "epicwasteoftime:block/jeb_wool"
+    }
+}
