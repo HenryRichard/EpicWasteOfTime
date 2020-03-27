@@ -1,5 +1,6 @@
 package henryrichard.epicwasteoftime.item.tool;
 
+import henryrichard.epicwasteoftime.item.EwotItemTier;
 import henryrichard.epicwasteoftime.util.LoreMaster;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.item.IItemTier;
@@ -16,11 +17,12 @@ import javax.annotation.Nullable;
 import java.util.List;
 
 public class EnditeSpadaxeItem extends SpadaxeItem implements IEnditeTool  {
-    public EnditeSpadaxeItem(IItemTier tier, Properties builder) {
-        super(tier, builder);
-    }
     public EnditeSpadaxeItem(IItemTier tier, float damage, Properties builder) {
         super(tier, damage, builder);
+    }
+
+    public EnditeSpadaxeItem(IItemTier tier, Properties builder) {
+        super(tier, builder);
     }
 
     /**

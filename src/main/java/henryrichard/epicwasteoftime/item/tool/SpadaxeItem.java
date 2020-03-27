@@ -29,7 +29,7 @@ public class SpadaxeItem extends ToolItem {
     @Override
     public boolean canHarvestBlock(BlockState state) {
         Material material = state.getMaterial();
-        if(state.getHarvestTool() == ToolType.PICKAXE || state.getHarvestTool() == ToolType.SHOVEL ||material ==  Material.ROCK || material == Material.IRON || material == Material.ANVIL) {
+        if(state.getHarvestTool() == ToolType.PICKAXE || state.getHarvestTool() == ToolType.SHOVEL || material ==  Material.ROCK || material == Material.IRON || material == Material.ANVIL) {
             return state.getHarvestLevel() <= this.getTier().getHarvestLevel();
         }
         return false;

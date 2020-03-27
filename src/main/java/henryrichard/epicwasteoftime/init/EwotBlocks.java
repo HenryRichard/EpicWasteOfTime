@@ -26,6 +26,7 @@ import net.minecraftforge.registries.ObjectHolder;
 @ObjectHolder(EwotMain.MODID)
 public abstract class EwotBlocks {
 
+
     //Ore Blocks
     public static final Block amethyst_ore = null;
     public static final Block endust_ore = null;

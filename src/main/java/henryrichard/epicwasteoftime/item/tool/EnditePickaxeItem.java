@@ -4,6 +4,7 @@ import henryrichard.epicwasteoftime.util.LoreMaster;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.item.IItemTier;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.PickaxeItem;
 import net.minecraft.item.Rarity;
 import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.text.TextFormatting;
@@ -16,12 +17,9 @@ import javax.annotation.Nullable;
 import java.util.List;
 
 public class EnditePickaxeItem extends PickaxeItem implements IEnditeTool  {
-    public EnditePickaxeItem(IItemTier tier, Properties builder) {
-        super(tier, builder);
-    }
 
-    public EnditePickaxeItem(IItemTier tier, int damage, Properties builder) {
-        super(tier, damage, builder);
+    public EnditePickaxeItem(IItemTier tier, int damage, float attackSpeed, Properties builder) {
+        super(tier, damage, attackSpeed, builder);
     }
 
     /**

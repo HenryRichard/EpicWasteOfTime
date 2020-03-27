@@ -2,6 +2,7 @@ package henryrichard.epicwasteoftime.item.tool;
 
 import henryrichard.epicwasteoftime.util.LoreMaster;
 import net.minecraft.client.util.ITooltipFlag;
+import net.minecraft.item.AxeItem;
 import net.minecraft.item.IItemTier;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Rarity;
@@ -16,9 +17,6 @@ import javax.annotation.Nullable;
 import java.util.List;
 
 public class EnditeAxeItem extends AxeItem implements IEnditeTool {
-    public EnditeAxeItem(IItemTier tier, Properties builder) {
-        super(tier, builder);
-    }
 
     public EnditeAxeItem(IItemTier tier, float damage, float attackSpeed, Properties builder) {
         super(tier, damage, attackSpeed, builder);

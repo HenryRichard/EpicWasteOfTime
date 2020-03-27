@@ -4,7 +4,6 @@ import henryrichard.epicwasteoftime.EwotMain;
 import henryrichard.epicwasteoftime.init.EwotBlocks;
 import henryrichard.epicwasteoftime.init.EwotTools;
 import net.minecraft.advancements.criterion.InventoryChangeTrigger;
-import net.minecraft.advancements.criterion.ItemPredicate;
 import net.minecraft.block.Blocks;
 import net.minecraft.data.*;
 import net.minecraft.item.Item;
@@ -19,7 +18,6 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.GatherDataEvent;
 
-import javax.annotation.Resource;
 import java.util.function.Consumer;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, modid = EwotMain.MODID)
@@ -288,10 +286,13 @@ public abstract class DataGen {
                     .build(consumer,  new ResourceLocation(EwotMain.MODID, "tools/" + name + "/" + name + "_mattock_from_axe_and_hoe"));
         }
 
+        @SuppressWarnings("all")
         private Ingredient ingredientFromObject(Object obj) {
             if(obj instanceof Tag<?>) {
                 try {
-                    //noinspection unchecked
+                    //yes i know this is very bad I'm sorry
+                    //But it works for this use case and is only a called when I generate data, so it's OK
+                    //don't ever do this in your own work; put time in to make a better solution
                     return Ingredient.fromTag((Tag<Item>) obj);
                 } catch(Exception e) {
                     EwotMain.LOGGER.error("You shall not pass a non-item tag!");
@@ -306,10 +307,10 @@ public abstract class DataGen {
             return Ingredient.EMPTY;
         }
 
+        @SuppressWarnings("all")
         private InventoryChangeTrigger.Instance hasObject(Object obj) {
             if(obj instanceof Tag<?>) {
                 try {
-                    //noinspection unchecked
                     return this.hasItem((Tag<Item>) obj);
                 } catch(Exception e) {
                     EwotMain.LOGGER.error("You shall not pass a non-item tag!");

@@ -3,14 +3,8 @@ package henryrichard.epicwasteoftime.init;
 import henryrichard.epicwasteoftime.EwotMain;
 import henryrichard.epicwasteoftime.item.EwotItemTier;
 import henryrichard.epicwasteoftime.item.tool.*;
-import henryrichard.epicwasteoftime.item.weapon.EnditeSwordItem;
-import henryrichard.epicwasteoftime.item.weapon.GoldenBowItem;
-import henryrichard.epicwasteoftime.item.weapon.SwordItem;
-import henryrichard.epicwasteoftime.item.weapon.ZwammahItem;
-import net.minecraft.item.IItemTier;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemTier;
-import net.minecraft.item.Rarity;
+import henryrichard.epicwasteoftime.item.weapon.*;
+import net.minecraft.item.*;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -85,9 +79,9 @@ public abstract class EwotTools {
         registerFullToolSet(event, EwotItemTier.SNOW, 5.0f, -3.2f, "snow");
 
         event.getRegistry().registerAll(
-                new EnditeSwordItem(EwotItemTier.ENDITE, new Item.Properties().group(EwotItemGroups.EWOT_TOOLS)).setRegistryName("endite_sword"),
-                new EnditeShovelItem(EwotItemTier.ENDITE, new Item.Properties().group(EwotItemGroups.EWOT_TOOLS)).setRegistryName("endite_shovel"),
-                new EnditePickaxeItem(EwotItemTier.ENDITE, new Item.Properties().group(EwotItemGroups.EWOT_TOOLS)).setRegistryName("endite_pickaxe"),
+                new EnditeSwordItem(EwotItemTier.ENDITE, 3, -2.4f, new Item.Properties().group(EwotItemGroups.EWOT_TOOLS)).setRegistryName("endite_sword"),
+                new EnditeShovelItem(EwotItemTier.ENDITE, 1.5F, -3.0f, new Item.Properties().group(EwotItemGroups.EWOT_TOOLS)).setRegistryName("endite_shovel"),
+                new EnditePickaxeItem(EwotItemTier.ENDITE, 1, -2.8f, new Item.Properties().group(EwotItemGroups.EWOT_TOOLS)).setRegistryName("endite_pickaxe"),
                 new EnditeAxeItem(EwotItemTier.ENDITE, 2.0f, -3.0f, new Item.Properties().group(EwotItemGroups.EWOT_TOOLS)).setRegistryName("endite_axe"),
                 new EnditeHoeItem(EwotItemTier.ENDITE, new Item.Properties().group(EwotItemGroups.EWOT_TOOLS)).setRegistryName("endite_hoe"),
                 new EnditeSpadaxeItem(EwotItemTier.ENDITE, new Item.Properties().group(EwotItemGroups.EWOT_TOOLS)).setRegistryName("endite_spadaxe"),
@@ -108,11 +102,11 @@ public abstract class EwotTools {
 
     private static void registerFullToolSet(RegistryEvent.Register<Item> event, IItemTier tier, float axeDamage, float axeSpeed, String name) {
         event.getRegistry().registerAll(
-                new SwordItem(tier, new Item.Properties().group(EwotItemGroups.EWOT_TOOLS)).setRegistryName(name + "_sword"),
-                new ShovelItem(tier, new Item.Properties().group(EwotItemGroups.EWOT_TOOLS)).setRegistryName(name + "_shovel"),
-                new PickaxeItem(tier, new Item.Properties().group(EwotItemGroups.EWOT_TOOLS)).setRegistryName(name + "_pickaxe"),
+                new SwordItem(tier, 3, -2.4f, new Item.Properties().group(EwotItemGroups.EWOT_TOOLS)).setRegistryName(name + "_sword"),
+                new ShovelItem(tier, 1.5F, -3.0f, new Item.Properties().group(EwotItemGroups.EWOT_TOOLS)).setRegistryName(name + "_shovel"),
+                new PickaxeItem(tier, 1, -2.8f, new Item.Properties().group(EwotItemGroups.EWOT_TOOLS)).setRegistryName(name + "_pickaxe"),
                 new AxeItem(tier, axeDamage, axeSpeed, new Item.Properties().group(EwotItemGroups.EWOT_TOOLS)).setRegistryName(name + "_axe"),
-                new HoeItem(tier, new Item.Properties().group(EwotItemGroups.EWOT_TOOLS)).setRegistryName(name + "_hoe")
+                new HoeItem(tier, (float)(-3 + tier.getHarvestLevel()), new Item.Properties().group(EwotItemGroups.EWOT_TOOLS)).setRegistryName(name + "_hoe")
         );
         registerNewToolSet(event, tier, axeDamage, axeSpeed, name);
     }

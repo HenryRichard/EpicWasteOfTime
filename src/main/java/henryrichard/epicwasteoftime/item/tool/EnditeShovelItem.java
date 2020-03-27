@@ -5,6 +5,7 @@ import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.item.IItemTier;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Rarity;
+import net.minecraft.item.ShovelItem;
 import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.text.TextFormatting;
 import net.minecraft.util.text.TranslationTextComponent;
@@ -16,12 +17,9 @@ import javax.annotation.Nullable;
 import java.util.List;
 
 public class EnditeShovelItem extends ShovelItem implements IEnditeTool  {
-    public EnditeShovelItem(IItemTier tier, Properties builder) {
-        super(tier, builder);
-    }
 
-    public EnditeShovelItem(IItemTier tier, float damage, Properties builder) {
-        super(tier, damage, builder);
+    public EnditeShovelItem(IItemTier tier, float damage, float attackSpeed, Properties builder) {
+        super(tier, damage, attackSpeed, builder);
     }
 
     /**

@@ -16,9 +16,6 @@ import javax.annotation.Nullable;
 import java.util.List;
 
 public class EnditeMattockItem extends MattockItem implements IEnditeTool  {
-    public EnditeMattockItem(IItemTier tier, Properties builder) {
-        super(tier, builder);
-    }
 
     public EnditeMattockItem(IItemTier tier, float damage, float attackSpeed, Properties builder) {
         super(tier, damage, attackSpeed, builder);
