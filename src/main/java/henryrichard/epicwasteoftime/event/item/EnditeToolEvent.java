@@ -32,7 +32,7 @@ public abstract class EnditeToolEvent {
     public static void breakBlock(final BlockEvent.BreakEvent event) {
         ItemStack stack = event.getPlayer().getHeldItemMainhand();
         Item item = stack.getItem();
-        if(item instanceof TieredItem && item instanceof IEnditeTool && !event.getPlayer().dimension.equals(DimensionType.THE_END)) {
+        if(item instanceof TieredItem && item instanceof IEnditeTool && !event.getPlayer().dimension.equals(DimensionType.THE_END) && stack.getEquipmentSlot() != null) {
             if(item instanceof SwordItem) {
                 stack.damageItem(7, event.getPlayer(), e -> e.sendBreakAnimation(stack.getEquipmentSlot()));
             } else {
