@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:stone_pickaxe"
+    },
+    {
+      "item": "minecraft:stone_shovel"
+    }
+  ],
+  "result": {
+    "item": "epicwasteoftime:stone_spadaxe"
+  }
+}

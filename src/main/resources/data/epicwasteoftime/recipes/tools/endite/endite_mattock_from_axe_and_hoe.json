@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "epicwasteoftime:endite_axe"
+    },
+    {
+      "item": "epicwasteoftime:endite_hoe"
+    }
+  ],
+  "result": {
+    "item": "epicwasteoftime:endite_mattock"
+  }
+}

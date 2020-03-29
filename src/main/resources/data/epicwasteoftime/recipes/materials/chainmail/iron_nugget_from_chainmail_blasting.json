@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": {
+    "item": "epicwasteoftime:iron_chainmail"
+  },
+  "result": {
+    "item": "minecraft:iron_nugget",
+    "count": 5
+  },
+  "experience": 0.1,
+  "cookingtime": 100
+}

@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "epicwasteoftime:ores/pinkite/pinkite_nugget"
+    ]
+  },
+  "criteria": {
+    "has_pinkite_ingot": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "tag": "forge:ingots/pinkite"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "epicwasteoftime:ores/pinkite/pinkite_nugget"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_pinkite_ingot",
+      "has_the_recipe"
+    ]
+  ]
+}

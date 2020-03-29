@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XX",
+    " T"
+  ],
+  "key": {
+    "X": {
+      "tag": "forge:ingots/pinkite"
+    },
+    "T": {
+      "item": "epicwasteoftime:pinkite_axe"
+    }
+  },
+  "result": {
+    "item": "epicwasteoftime:pinkite_mattock"
+  }
+}

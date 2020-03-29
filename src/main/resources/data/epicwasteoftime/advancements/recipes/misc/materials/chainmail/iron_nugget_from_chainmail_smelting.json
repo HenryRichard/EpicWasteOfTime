@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "epicwasteoftime:materials/chainmail/iron_nugget_from_chainmail_smelting"
+    ]
+  },
+  "criteria": {
+    "has_iron_chainmail": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "epicwasteoftime:iron_chainmail"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "epicwasteoftime:materials/chainmail/iron_nugget_from_chainmail_smelting"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_iron_chainmail",
+      "has_the_recipe"
+    ]
+  ]
+}

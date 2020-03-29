@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XX"
+  ],
+  "key": {
+    "X": {
+      "item": "epicwasteoftime:jeb_wool"
+    }
+  },
+  "result": {
+    "item": "epicwasteoftime:jeb_carpet",
+    "count": 3
+  }
+}

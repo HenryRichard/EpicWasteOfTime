@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "epicwasteoftime:ores/endust/endust_from_smelting"
+    ]
+  },
+  "criteria": {
+    "has_endust_ore": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "tag": "forge:ores/endust"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "epicwasteoftime:ores/endust/endust_from_smelting"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_endust_ore",
+      "has_the_recipe"
+    ]
+  ]
+}

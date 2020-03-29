@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "epicwasteoftime:tools/amethyst/amethyst_spadaxe_from_shovel"
+    ]
+  },
+  "criteria": {
+    "has_amethyst": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "tag": "forge:gems/amethyst"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "epicwasteoftime:tools/amethyst/amethyst_spadaxe_from_shovel"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_amethyst",
+      "has_the_recipe"
+    ]
+  ]
+}

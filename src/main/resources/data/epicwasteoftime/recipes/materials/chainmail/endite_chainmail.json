@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "X X",
+    " X ",
+    "X X"
+  ],
+  "key": {
+    "X": {
+      "tag": "forge:nuggets/endite"
+    }
+  },
+  "result": {
+    "item": "epicwasteoftime:endite_chainmail"
+  }
+}

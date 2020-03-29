@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "tag": "forge:storage_blocks/pinkite"
+    }
+  ],
+  "result": {
+    "item": "epicwasteoftime:pinkite_ingot",
+    "count": 9
+  }
+}

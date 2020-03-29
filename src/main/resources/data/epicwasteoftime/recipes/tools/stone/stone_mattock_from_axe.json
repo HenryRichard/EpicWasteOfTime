@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XX",
+    " T"
+  ],
+  "key": {
+    "X": {
+      "tag": "forge:cobblestone"
+    },
+    "T": {
+      "item": "minecraft:stone_axe"
+    }
+  },
+  "result": {
+    "item": "epicwasteoftime:stone_mattock"
+  }
+}

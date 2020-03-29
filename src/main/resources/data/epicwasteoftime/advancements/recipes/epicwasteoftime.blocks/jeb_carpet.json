@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "epicwasteoftime:jeb_carpet"
+    ]
+  },
+  "criteria": {
+    "has_jeb_wool": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "epicwasteoftime:jeb_wool"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "epicwasteoftime:jeb_carpet"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_jeb_wool",
+      "has_the_recipe"
+    ]
+  ]
+}

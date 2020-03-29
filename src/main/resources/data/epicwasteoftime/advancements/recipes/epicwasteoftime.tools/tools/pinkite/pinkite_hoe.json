@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "epicwasteoftime:tools/pinkite/pinkite_hoe"
+    ]
+  },
+  "criteria": {
+    "has_pinkite": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "tag": "forge:ingots/pinkite"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "epicwasteoftime:tools/pinkite/pinkite_hoe"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_pinkite",
+      "has_the_recipe"
+    ]
+  ]
+}
