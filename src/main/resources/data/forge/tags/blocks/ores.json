@@ -2,7 +2,6 @@
   "replace": false,
   "values": [
     "#forge:ores/aluminum",
-    "#forge:ores/aluminium",
     "#forge:ores/amethyst",
     "#forge:ores/pinkite"
   ]

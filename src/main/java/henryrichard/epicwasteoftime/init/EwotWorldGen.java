@@ -7,6 +7,7 @@ import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.pattern.BlockMatcher;
 import net.minecraft.world.biome.Biome;
+import net.minecraft.world.biome.TheEndBiome;
 import net.minecraft.world.gen.GenerationStage;
 import net.minecraft.world.gen.feature.Feature;
 import net.minecraft.world.gen.feature.OreFeature;
@@ -49,7 +50,7 @@ public abstract class EwotWorldGen {
                         )
                     )
                 );
-            } else if (b.getCategory() == Biome.Category.THEEND) {
+            } else if (b.getCategory() == Biome.Category.THEEND && !(b instanceof TheEndBiome)) {
                 //Endust
                 b.addFeature(
                         GenerationStage.Decoration.UNDERGROUND_ORES,
