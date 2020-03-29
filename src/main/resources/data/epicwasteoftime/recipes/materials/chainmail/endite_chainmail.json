@@ -1,18 +1,16 @@
 {
   "type": "minecraft:crafting_shaped",
-  "group": "epicwasteoftime:chainmail",
   "pattern": [
-    "# #",
-    " # ",
-    "# #"
+    "X X",
+    " X ",
+    "X X"
   ],
   "key": {
-    "#": {
+    "X": {
       "tag": "forge:nuggets/endite"
     }
   },
   "result": {
-    "item": "epicwasteoftime:endite_chainmail",
-    "count": 1
+    "item": "epicwasteoftime:endite_chainmail"
   }
 }

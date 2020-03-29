@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "epicwasteoftime:ores/endust/endust_block"
+    ]
+  },
+  "criteria": {
+    "has_endust": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "tag": "forge:dusts/endust"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "epicwasteoftime:ores/endust/endust_block"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_endust",
+      "has_the_recipe"
+    ]
+  ]
+}

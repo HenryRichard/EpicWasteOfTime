@@ -1,19 +1,14 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "###",
-    "###",
-    "###"
+    "XXX",
+    "XXX",
+    "XXX"
   ],
   "key": {
-    "#": [
-      {
-        "tag": "forge:nuggets/aluminum"
-      },
-      {
-        "tag": "forge:nuggets/aluminium"
-      }
-    ]
+    "X": {
+      "tag": "forge:nuggets/aluminum"
+    }
   },
   "result": {
     "item": "epicwasteoftime:aluminum_ingot"

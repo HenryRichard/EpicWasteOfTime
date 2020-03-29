@@ -2,31 +2,31 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "tag": "forge:ingots/pinkite"
+      "tag": "forge:dusts/endust"
     },
     {
-      "tag": "forge:ingots/gold"
+      "tag": "forge:dusts/endust"
+    },
+    {
+      "tag": "forge:dusts/endust"
+    },
+    {
+      "tag": "forge:dusts/endust"
+    },
+    {
+      "tag": "forge:dusts/endust"
+    },
+    {
+      "tag": "forge:dusts/endust"
+    },
+    {
+      "tag": "forge:ingots/pinkite"
     },
     {
       "tag": "forge:ingots/iron"
     },
     {
-      "tag": "forge:dusts/endust"
-    },
-    {
-      "tag": "forge:dusts/endust"
-    },
-    {
-      "tag": "forge:dusts/endust"
-    },
-    {
-      "tag": "forge:dusts/endust"
-    },
-    {
-      "tag": "forge:dusts/endust"
-    },
-    {
-      "tag": "forge:dusts/endust"
+      "tag": "forge:ingots/gold"
     }
   ],
   "result": {

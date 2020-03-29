@@ -1,9 +1,9 @@
 {
   "type": "minecraft:smelting",
   "ingredient": {
-    "tag": "forge:ores/pinkite"
+    "tag": "forge:ore/pinkite"
   },
   "result": "epicwasteoftime:pinkite_ingot",
-  "experience": 1.0,
+  "experience": 0.7,
   "cookingtime": 200
 }

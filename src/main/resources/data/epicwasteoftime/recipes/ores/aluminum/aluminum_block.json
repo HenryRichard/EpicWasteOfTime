@@ -1,19 +1,14 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "###",
-    "###",
-    "###"
+    "XXX",
+    "XXX",
+    "XXX"
   ],
   "key": {
-    "#": [
-      {
-        "tag": "forge:ingots/aluminum"
-      },
-      {
-        "tag": "forge:ingots/aluminium"
-      }
-    ]
+    "X": {
+      "tag": "forge:ingots/aluminum"
+    }
   },
   "result": {
     "item": "epicwasteoftime:aluminum_block"

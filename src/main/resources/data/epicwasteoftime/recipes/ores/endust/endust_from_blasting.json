@@ -1,9 +1,9 @@
 {
   "type": "minecraft:blasting",
   "ingredient": {
-    "tag": "forge:ores/endust"
+    "tag": "forge:ore/endust"
   },
   "result": "epicwasteoftime:endust",
-  "experience": 1.0,
+  "experience": 0.7,
   "cookingtime": 100
 }

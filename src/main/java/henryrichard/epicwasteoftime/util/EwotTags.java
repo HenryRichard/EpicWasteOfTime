@@ -12,10 +12,10 @@ public abstract class EwotTags {
 
         public static final Tag<Item> LAVALEAF_LOGS = tag(EwotMain.MODID, "lavaleaf_logs");
 
-        public static final Tag<Item> ORE_AMETHYST = tag("ore/amethyst");
-        public static final Tag<Item> ORE_ALUMINUM = tag("ore/aluminum");
-        public static final Tag<Item> ORE_ENDUST = tag("ore/endust");
-        public static final Tag<Item> ORE_PINKITE = tag("ore/pinkite");
+        public static final Tag<Item> ORE_AMETHYST = tag("ores/amethyst");
+        public static final Tag<Item> ORE_ALUMINUM = tag("ores/aluminum");
+        public static final Tag<Item> ORE_ENDUST = tag("ores/endust");
+        public static final Tag<Item> ORE_PINKITE = tag("ores/pinkite");
 
         public static final Tag<Item> STORAGE_BLOCKS_AMETHYST = tag("storage_blocks/amethyst");
         public static final Tag<Item> STORAGE_BLOCKS_ALUMINUM = tag("storage_blocks/aluminum");

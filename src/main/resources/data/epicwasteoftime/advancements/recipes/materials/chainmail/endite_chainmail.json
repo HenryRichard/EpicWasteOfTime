@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "epicwasteoftime:materials/chainmail/endite_chainmail"
+    ]
+  },
+  "criteria": {
+    "has_endite": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "tag": "forge:nuggets/endite"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "epicwasteoftime:materials/chainmail/endite_chainmail"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_endite",
+      "has_the_recipe"
+    ]
+  ]
+}

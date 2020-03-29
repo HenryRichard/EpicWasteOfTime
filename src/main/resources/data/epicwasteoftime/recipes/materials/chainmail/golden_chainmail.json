@@ -1,18 +1,16 @@
 {
   "type": "minecraft:crafting_shaped",
-  "group": "epicwasteoftime:chainmail",
   "pattern": [
-    "# #",
-    " # ",
-    "# #"
+    "X X",
+    " X ",
+    "X X"
   ],
   "key": {
-    "#": {
+    "X": {
       "tag": "forge:nuggets/gold"
     }
   },
   "result": {
-    "item": "epicwasteoftime:golden_chainmail",
-    "count": 1
+    "item": "epicwasteoftime:golden_chainmail"
   }
 }

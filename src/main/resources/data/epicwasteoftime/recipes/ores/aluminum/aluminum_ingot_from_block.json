@@ -1,14 +1,9 @@
 {
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
-    [
-      {
-        "tag": "forge:storage_blocks/aluminum"
-      },
-      {
-        "tag": "forge:storage_blocks/aluminium"
-      }
-    ]
+    {
+      "tag": "forge:storage_blocks/aluminum"
+    }
   ],
   "result": {
     "item": "epicwasteoftime:aluminum_ingot",

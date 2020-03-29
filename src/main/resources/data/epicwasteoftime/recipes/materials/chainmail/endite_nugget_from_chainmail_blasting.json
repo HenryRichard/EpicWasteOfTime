@@ -1,15 +1,9 @@
 {
   "type": "minecraft:blasting",
-  "group": "epicwasteoftime:chainmail",
-  "ingredient": [
-    {
-      "item": "epicwasteoftime:endite_chainmail"
-    }
-  ],
-  "result": {
-    "item": "epicwasteoftime:endite_nugget",
-    "count": 5
+  "ingredient": {
+    "item": "epicwasteoftime:endite_chainmail"
   },
-  "experience": 0.0,
+  "result": "epicwasteoftime:endite_nugget",
+  "experience": 0.1,
   "cookingtime": 100
 }

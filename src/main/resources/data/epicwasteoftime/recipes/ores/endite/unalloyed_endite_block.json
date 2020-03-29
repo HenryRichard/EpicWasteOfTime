@@ -1,14 +1,14 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "###",
-    "###",
-    "###"
+    "XXX",
+    "XXX",
+    "XXX"
   ],
   "key": {
-    "#": {
-        "tag": "forge:ingots/unalloyed_endite"
-      }
+    "X": {
+      "tag": "forge:ingots/unalloyed_endite"
+    }
   },
   "result": {
     "item": "epicwasteoftime:unalloyed_endite_block"

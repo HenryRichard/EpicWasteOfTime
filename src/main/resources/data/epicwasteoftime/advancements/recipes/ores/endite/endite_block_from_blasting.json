@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "epicwasteoftime:ores/endite/endite_block_from_blasting"
+    ]
+  },
+  "criteria": {
+    "has_unalloyed_endite": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "tag": "forge:ingots/unalloyed_endite"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "epicwasteoftime:ores/endite/endite_block_from_blasting"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_unalloyed_endite",
+      "has_the_recipe"
+    ]
+  ]
+}

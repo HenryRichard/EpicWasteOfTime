@@ -1,6 +1,5 @@
 package henryrichard.epicwasteoftime.util;
 
-import com.sun.istack.internal.NotNull;
 import henryrichard.epicwasteoftime.EwotMain;
 import henryrichard.epicwasteoftime.init.EwotBlocks;
 import henryrichard.epicwasteoftime.init.EwotItems;
@@ -180,6 +179,19 @@ public abstract class DataGen {
                     .addIngredient(EwotTags.Items.STORAGE_BLOCKS_UNALLOYED_ENDITE)
                     .addCriterion("has_unalloyed_endite_block", hasItem(EwotTags.Items.STORAGE_BLOCKS_UNALLOYED_ENDITE))
                     .build(consumer, new ResourceLocation(EwotMain.MODID, ORE_PATH + "endite/unalloyed_endite_ingot_from_block"));
+
+            ShapelessRecipeBuilder.shapelessRecipe(EwotItems.unalloyed_endite_ingot, 1)
+                    .addIngredient(EwotTags.Items.DUST_ENDUST)
+                    .addIngredient(EwotTags.Items.DUST_ENDUST)
+                    .addIngredient(EwotTags.Items.DUST_ENDUST)
+                    .addIngredient(EwotTags.Items.DUST_ENDUST)
+                    .addIngredient(EwotTags.Items.DUST_ENDUST)
+                    .addIngredient(EwotTags.Items.DUST_ENDUST)
+                    .addIngredient(EwotTags.Items.INGOTS_PINKITE)
+                    .addIngredient(Tags.Items.INGOTS_IRON)
+                    .addIngredient(Tags.Items.INGOTS_GOLD)
+                    .addCriterion("has_gone_to_outer_end", EnterBlockTrigger.Instance.forBlock(Blocks.END_GATEWAY))
+                    .build(consumer, new ResourceLocation(EwotMain.MODID, ORE_PATH + "endite/unalloyed_endite_ingot"));
 
             CookingRecipeBuilder.blastingRecipe(Ingredient.fromTag(EwotTags.Items.INGOTS_UNALLOYED_ENDITE), EwotItems.endite_ingot, 4f, 200).addCriterion("has_unalloyed_endite", hasItem(EwotTags.Items.INGOTS_UNALLOYED_ENDITE))
                     .build(consumer, new ResourceLocation(EwotMain.MODID, ORE_PATH + "endite/endite_ingot_from_blasting"));
