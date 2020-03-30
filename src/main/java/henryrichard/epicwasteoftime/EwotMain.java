@@ -5,6 +5,7 @@ import henryrichard.epicwasteoftime.init.EwotItems;
 import henryrichard.epicwasteoftime.init.EwotWorldGen;
 import henryrichard.epicwasteoftime.world.feature.EwotFeatureConfigs;
 import net.minecraft.block.Blocks;
+import net.minecraft.block.ComposterBlock;
 import net.minecraft.block.FireBlock;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderTypeLookup;
@@ -48,6 +49,11 @@ public class EwotMain {
         FireBlock fire = (FireBlock) Blocks.FIRE;
         fire.setFireInfo(EwotBlocks.jeb_wool, 30, 60);
         fire.setFireInfo(EwotBlocks.jeb_carpet, 60, 20);
+
+        //Make things compostable
+        ComposterBlock.CHANCES.put(EwotBlocks.lavaleaves, 0.3f);
+        ComposterBlock.CHANCES.put(EwotBlocks.lavalogged_lavaleaves, 0.3f);
+        ComposterBlock.CHANCES.put(EwotBlocks.lavaleaf_sapling, 0.3f);
 
         //Register all the new ore generation
         EwotWorldGen.addOreGen();
