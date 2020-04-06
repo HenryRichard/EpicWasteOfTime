@@ -7,7 +7,7 @@ import henryrichard.epicwasteoftime.block.OreBlock;
 import henryrichard.epicwasteoftime.block.SaplingBlock;
 import henryrichard.epicwasteoftime.block.tileentity.AluminumTankBlock;
 import henryrichard.epicwasteoftime.block.tileentity.CrudePinkiteFurnaceBlock;
-import henryrichard.epicwasteoftime.block.trees.*;
+import henryrichard.epicwasteoftime.block.tree.*;
 import net.minecraft.block.*;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.material.MaterialColor;

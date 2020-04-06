@@ -1,4 +1,4 @@
-package henryrichard.epicwasteoftime.block.trees;
+package henryrichard.epicwasteoftime.block.tree;
 
 import henryrichard.epicwasteoftime.world.feature.EwotFeatureConfigs;
 import net.minecraft.block.trees.Tree;

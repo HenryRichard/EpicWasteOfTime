@@ -61,11 +61,13 @@ public class AluminumTankBlock extends ContainerBlock {
                 FluidActionResult result = FluidUtil.tryFillContainerAndStow(stack, blockHandler, null, Integer.MAX_VALUE, player, true);
                 if(result.isSuccess()) {
                     player.setHeldItem(handIn, result.getResult());
+                    worldIn.notifyBlockUpdate(pos, state, state, 2);
                     return ActionResultType.SUCCESS;
                 } else {
                     result = FluidUtil.tryEmptyContainerAndStow(stack, blockHandler, null, Integer.MAX_VALUE, player, true);
                     if(result.isSuccess()) {
                         player.setHeldItem(handIn, result.getResult());
+                        worldIn.notifyBlockUpdate(pos, state, state, 2);
                         return ActionResultType.SUCCESS;
                     }
                 }

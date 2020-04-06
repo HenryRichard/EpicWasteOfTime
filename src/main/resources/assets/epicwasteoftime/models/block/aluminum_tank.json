@@ -1,5 +1,6 @@
 {
 	"credit": "Made with Blockbench",
+	"parent": "block/block",
 	"textures": {
 		"base": "epicwasteoftime:block/aluminum_tank_base",
 		"glass": "epicwasteoftime:block/aluminum_tank_glass",
