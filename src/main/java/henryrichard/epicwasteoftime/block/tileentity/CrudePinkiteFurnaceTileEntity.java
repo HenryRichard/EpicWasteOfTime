@@ -22,7 +22,7 @@ import javax.annotation.Nullable;
 
 public class CrudePinkiteFurnaceTileEntity extends TileEntity implements ITickableTileEntity, ICapabilityProvider {
 
-    private LazyOptional<IItemHandler> itemHandler = LazyOptional.of(this::createItemHandler);
+    private LazyOptional<ItemStackHandler> itemHandler = LazyOptional.of(this::createItemHandler);
 
     public CrudePinkiteFurnaceTileEntity() {
         super(EwotTileEntities.crude_pinkite_furnace);
@@ -41,14 +41,14 @@ public class CrudePinkiteFurnaceTileEntity extends TileEntity implements ITickab
     @Override
     public void read(CompoundNBT compound) {
         CompoundNBT inventoryCompound = compound.getCompound("inventory");
-        itemHandler.ifPresent(handler -> ((INBTSerializable<CompoundNBT>) handler).deserializeNBT(inventoryCompound));
+        itemHandler.ifPresent(handler -> handler.deserializeNBT(inventoryCompound));
 
         super.read(compound);
     }
 
     @Override
     public CompoundNBT write(CompoundNBT compound) {
-        itemHandler.ifPresent(handler -> compound.put("inventory", ((INBTSerializable<CompoundNBT>)handler).serializeNBT()));
+        itemHandler.ifPresent(handler -> compound.put("inventory", (handler.serializeNBT())));
         return super.write(compound);
     }
 
@@ -61,7 +61,7 @@ public class CrudePinkiteFurnaceTileEntity extends TileEntity implements ITickab
         }
     }
 
-    private IItemHandler createItemHandler() {
+    private ItemStackHandler createItemHandler() {
         return new ItemStackHandler(3) {
             @Override
             protected void onContentsChanged(int slot) {

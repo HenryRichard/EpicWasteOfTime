@@ -19,7 +19,6 @@ import net.minecraftforge.fluids.FluidUtil;
 import net.minecraftforge.fluids.capability.CapabilityFluidHandler;
 
 import javax.annotation.Nullable;
-import javax.swing.*;
 
 import static net.minecraft.state.properties.BlockStateProperties.HORIZONTAL_FACING;
 
@@ -41,7 +40,7 @@ public class AluminumTankBlock extends ContainerBlock {
         TileEntity tileEntity = world.getTileEntity(pos);
         if(tileEntity instanceof AluminumTankTileEntity) {
             return tileEntity.getCapability(CapabilityFluidHandler.FLUID_HANDLER_CAPABILITY).map(handler -> handler.getFluidInTank(0).getFluid().getAttributes().getLuminosity())
-                    .orElse(super.getLightValue(state, world, pos));
+                    .orElse(0);
         } else {
             return super.getLightValue(state, world, pos);
         }
