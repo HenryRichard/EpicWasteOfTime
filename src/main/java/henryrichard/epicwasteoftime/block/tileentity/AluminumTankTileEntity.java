@@ -19,6 +19,8 @@ import javax.annotation.Nullable;
 
 public class AluminumTankTileEntity extends TileEntity implements ICapabilityProvider {
 
+    public static int capacity = 16 * FluidAttributes.BUCKET_VOLUME;
+
     private LazyOptional<FluidTank> fluidHandler = LazyOptional.of(this::createFluidHandler);
 
     public AluminumTankTileEntity() {
@@ -26,7 +28,7 @@ public class AluminumTankTileEntity extends TileEntity implements ICapabilityPro
     }
 
     private FluidTank createFluidHandler() {
-        return new FluidTank(32 * FluidAttributes.BUCKET_VOLUME);
+        return new FluidTank(capacity);
     }
 
     @Override
@@ -48,15 +50,18 @@ public class AluminumTankTileEntity extends TileEntity implements ICapabilityPro
     @Override
     public CompoundNBT getUpdateTag() {
         EwotMain.LOGGER.info("Sending update tag!");
+        CompoundNBT mainTag = super.getUpdateTag();
         CompoundNBT fluidTag = new CompoundNBT();
         fluidHandler.ifPresent(handler -> handler.writeToNBT(fluidTag));
-        return fluidTag;
+        mainTag.put("fluid", fluidTag);
+        return mainTag;
     }
 
     @Override
     public void handleUpdateTag(CompoundNBT tag) {
         EwotMain.LOGGER.info("Receiving update tag!");
-        fluidHandler.ifPresent(handler -> handler.readFromNBT(tag));
+        fluidHandler.ifPresent(handler -> handler.readFromNBT(tag.getCompound("fluid")));
+        super.handleUpdateTag(tag);
     }
 
     @Nullable
