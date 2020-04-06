@@ -1,6 +1,7 @@
 package henryrichard.epicwasteoftime.init;
 
 import henryrichard.epicwasteoftime.EwotMain;
+import net.minecraft.item.BucketItem;
 import net.minecraft.item.Item;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;

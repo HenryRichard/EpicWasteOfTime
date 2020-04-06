@@ -1,0 +1,12 @@
+{
+    "variants": {
+        "facing=north,on=false": { "model": "epicwasteoftime:block/crude_pinkite_furnace" },
+        "facing=south,on=false": { "model": "epicwasteoftime:block/crude_pinkite_furnace", "y": 180 },
+        "facing=west,on=false":  { "model": "epicwasteoftime:block/crude_pinkite_furnace", "y": 270 },
+        "facing=east,on=false":  { "model": "epicwasteoftime:block/crude_pinkite_furnace", "y": 90 },
+        "facing=north,on=true": { "model": "epicwasteoftime:block/crude_pinkite_furnace_on" },
+        "facing=south,on=true": { "model": "epicwasteoftime:block/crude_pinkite_furnace_on", "y": 180 },
+        "facing=west,on=true":  { "model": "epicwasteoftime:block/crude_pinkite_furnace_on", "y": 270 },
+        "facing=east,on=true":  { "model": "epicwasteoftime:block/crude_pinkite_furnace_on", "y": 90 }
+    }
+}

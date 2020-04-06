@@ -39,9 +39,8 @@ public abstract class EnditeArmorEvent {
     @SubscribeEvent
     public static void dimensionChange(final EntityTravelToDimensionEvent event) {
         if(event.getEntity() instanceof LivingEntity) {
-            for(Iterator<ItemStack> iterator = event.getEntity().getArmorInventoryList().iterator(); iterator.hasNext(); ) {
-                ItemStack stack = iterator.next();
-                if (stack.getItem() instanceof ArmorItem && ((ArmorItem)stack.getItem()).getArmorMaterial() instanceof IEnditeArmorMaterial) {
+            for (ItemStack stack : event.getEntity().getArmorInventoryList()) {
+                if (stack.getItem() instanceof ArmorItem && ((ArmorItem) stack.getItem()).getArmorMaterial() instanceof IEnditeArmorMaterial) {
                     setAttributeModifier(stack, event.getDimension());
                 }
             }

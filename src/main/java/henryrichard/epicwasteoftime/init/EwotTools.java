@@ -69,6 +69,8 @@ public abstract class EwotTools {
 
     public static final Item book_of_teleportation = null;
 
+    public static final Item molten_pinkite_bucket = null;
+
     @SubscribeEvent
     public static void registerItems(RegistryEvent.Register<Item> event) {
 
@@ -96,7 +98,9 @@ public abstract class EwotTools {
 
         event.getRegistry().registerAll(
                 new ZwammahItem(new Item.Properties().group(EwotItemGroups.EWOT_TOOLS)).setRegistryName("zwammah"),
-                new TeleportingBookItem(new Item.Properties().group(EwotItemGroups.EWOT_TOOLS).maxStackSize(1).maxDamage(128)).setRegistryName("book_of_teleportation")
+                new TeleportingBookItem(new Item.Properties().group(EwotItemGroups.EWOT_TOOLS).maxStackSize(1).maxDamage(128)).setRegistryName("book_of_teleportation"),
+
+                new BucketItem(() -> EwotFluids.molten_pinkite, new Item.Properties().group(EwotItemGroups.EWOT_ITEMS).maxStackSize(1)).setRegistryName("molten_pinkite_bucket")
         );
     }
 

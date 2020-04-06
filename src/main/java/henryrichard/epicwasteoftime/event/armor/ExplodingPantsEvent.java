@@ -17,6 +17,7 @@ import net.minecraftforge.fml.common.Mod;
 @Mod.EventBusSubscriber(modid = EwotMain.MODID, bus = Mod.EventBusSubscriber.Bus.FORGE, value = {Dist.CLIENT})
 public abstract class ExplodingPantsEvent {
 
+    @SuppressWarnings("ConstantConditions")
     @SubscribeEvent
     public static void checkShouldDoKaboom(final LivingHurtEvent event) {
         LivingEntity livingEntity = event.getEntityLiving();

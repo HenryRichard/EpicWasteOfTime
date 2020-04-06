@@ -38,6 +38,7 @@ public class EwotMain {
         //I should probably be doing something here
     }
 
+    @SuppressWarnings("ConstantConditions")
     @SubscribeEvent
     public static void setup(final FMLCommonSetupEvent event) {
         //Setup time!

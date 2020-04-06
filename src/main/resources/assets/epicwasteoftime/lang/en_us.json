@@ -29,6 +29,14 @@
   "block.epicwasteoftime.jeb_wool": "jeb_ Wool",
   "block.epicwasteoftime.jeb_carpet": "jeb_ Carpet",
 
+
+  "block.epicwasteoftime.aluminum_tank": "Aluminum Tank",
+
+  "block.epicwasteoftime.crude_pinkite_machine_base": "Crude Pinkite Machine Base",
+  "block.epicwasteoftime.crude_pinkite_furnace": "Crude Pinkite Furnace",
+
+  "block.epicwasteoftime.molten_pinkite": "Molten Pinkite",
+
   "block.epicwasteoftime.fake_anvil": "Fake Anvil",
 
 
@@ -150,16 +158,18 @@
   "item.epicwasteoftime.diamond_spadaxe": "Diamond Spadaxe",
   "item.epicwasteoftime.diamond_mattock": "Diamond Mattock",
 
-  "item.epicwasteoftime.book_of_teleportation": "Book of Teleportation",
-  "item.epicwasteoftime.book_of_teleportation.desc.1": "This intra-dimensional device has been proven to be completely safe.",
-  "item.epicwasteoftime.book_of_teleportation.desc.2": "The pearls, however, have not.",
-
   "item.epicwasteoftime.zwammah": "The Zwammah",
   "item.epicwasteoftime.zwammah.desc.1": "One hammer to rule them all",
   "item.epicwasteoftime.zwammah.desc.2": "One hammer to find them",
   "item.epicwasteoftime.zwammah.desc.3": "One hammer to bring them all",
   "item.epicwasteoftime.zwammah.desc.4": "And in the darkness bind them",
   "item.epicwasteoftime.zwammah.desc.5": "In the land of %s where shadows lie",
+
+  "item.epicwasteoftime.book_of_teleportation": "Book of Teleportation",
+  "item.epicwasteoftime.book_of_teleportation.desc.1": "This intra-dimensional device has been proven to be completely safe.",
+  "item.epicwasteoftime.book_of_teleportation.desc.2": "The pearls, however, have not.",
+
+  "item.epicwasteoftime.molten_pinkite_bucket": "Molten Pinkite Bucket",
 
 
 
@@ -188,5 +198,7 @@
   "itemGroup.epicwasteoftime.blocks": "Epic Waste of Time Blocks",
   "itemGroup.epicwasteoftime.items": "Epic Waste of Time Items",
   "itemGroup.epicwasteoftime.tools": "Epic Waste of Time Tools",
-  "itemGroup.epicwasteoftime.armor": "Epic Waste of Time Armor"
+  "itemGroup.epicwasteoftime.armor": "Epic Waste of Time Armor",
+
+  "epicwasteoftime.container.pinkite_furnace": "Pinkite Furnace"
 }
