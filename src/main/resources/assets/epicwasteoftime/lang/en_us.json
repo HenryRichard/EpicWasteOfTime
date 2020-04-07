@@ -31,6 +31,7 @@
 
 
   "block.epicwasteoftime.aluminum_tank": "Aluminum Tank",
+  "block.epicwasteoftime.aluminum_tank.empty": "Empty",
 
   "block.epicwasteoftime.crude_pinkite_machine_base": "Crude Pinkite Machine Base",
   "block.epicwasteoftime.crude_pinkite_furnace": "Crude Pinkite Furnace",

@@ -1,6 +1,5 @@
 package henryrichard.epicwasteoftime.block.tileentity;
 
-import henryrichard.epicwasteoftime.EwotMain;
 import henryrichard.epicwasteoftime.init.EwotTileEntities;
 import net.minecraft.nbt.CompoundNBT;
 import net.minecraft.network.NetworkManager;
@@ -19,7 +18,7 @@ import javax.annotation.Nullable;
 
 public class AluminumTankTileEntity extends TileEntity implements ICapabilityProvider {
 
-    public static int capacity = 16 * FluidAttributes.BUCKET_VOLUME;
+    public static final int CAPACITY = 16 * FluidAttributes.BUCKET_VOLUME;
 
     private LazyOptional<FluidTank> fluidHandler = LazyOptional.of(this::createFluidHandler);
 
@@ -28,12 +27,12 @@ public class AluminumTankTileEntity extends TileEntity implements ICapabilityPro
     }
 
     private FluidTank createFluidHandler() {
-        return new FluidTank(capacity);
+        return new FluidTank(CAPACITY);
     }
 
     @Override
     public void read(CompoundNBT tag) {
-        fluidHandler.ifPresent(handler -> handler.readFromNBT(tag.getCompound("fluid")));
+        fluidHandler.ifPresent(handler -> handler.readFromNBT(tag.getCompound("Fluid")));
         super.read(tag);
     }
 
@@ -42,32 +41,29 @@ public class AluminumTankTileEntity extends TileEntity implements ICapabilityPro
         fluidHandler.ifPresent(handler -> {
             CompoundNBT fluidTag = new CompoundNBT();
             handler.writeToNBT(fluidTag);
-            tag.put("fluid", fluidTag);
+            tag.put("Fluid", fluidTag);
         });
         return super.write(tag);
     }
 
     @Override
     public CompoundNBT getUpdateTag() {
-        EwotMain.LOGGER.info("Sending update tag!");
         CompoundNBT mainTag = super.getUpdateTag();
         CompoundNBT fluidTag = new CompoundNBT();
         fluidHandler.ifPresent(handler -> handler.writeToNBT(fluidTag));
-        mainTag.put("fluid", fluidTag);
+        mainTag.put("Fluid", fluidTag);
         return mainTag;
     }
 
     @Override
     public void handleUpdateTag(CompoundNBT tag) {
-        EwotMain.LOGGER.info("Receiving update tag!");
-        fluidHandler.ifPresent(handler -> handler.readFromNBT(tag.getCompound("fluid")));
+        fluidHandler.ifPresent(handler -> handler.readFromNBT(tag.getCompound("Fluid")));
         super.handleUpdateTag(tag);
     }
 
     @Nullable
     @Override
     public SUpdateTileEntityPacket getUpdatePacket() {
-        EwotMain.LOGGER.info("Sending update packet!");
         CompoundNBT fluidTag = new CompoundNBT();
         fluidHandler.ifPresent(handler -> handler.writeToNBT(fluidTag));
         return new SUpdateTileEntityPacket(pos, -49, fluidTag);
@@ -75,7 +71,6 @@ public class AluminumTankTileEntity extends TileEntity implements ICapabilityPro
 
     @Override
     public void onDataPacket(NetworkManager net, SUpdateTileEntityPacket pkt) {
-        EwotMain.LOGGER.info("Receiving update packet!");
         fluidHandler.ifPresent(handler -> handler.readFromNBT(pkt.getNbtCompound()));
     }
 

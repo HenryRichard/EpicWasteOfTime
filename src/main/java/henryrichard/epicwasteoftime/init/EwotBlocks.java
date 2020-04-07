@@ -6,6 +6,7 @@ import henryrichard.epicwasteoftime.block.CarpetBlock;
 import henryrichard.epicwasteoftime.block.OreBlock;
 import henryrichard.epicwasteoftime.block.SaplingBlock;
 import henryrichard.epicwasteoftime.block.tileentity.AluminumTankBlock;
+import henryrichard.epicwasteoftime.block.tileentity.AluminumTankBlockItem;
 import henryrichard.epicwasteoftime.block.tileentity.CrudePinkiteFurnaceBlock;
 import henryrichard.epicwasteoftime.block.tree.*;
 import net.minecraft.block.*;
@@ -160,7 +161,7 @@ public abstract class EwotBlocks {
                 new BlockItem(jeb_wool, new Item.Properties().group(EwotItemGroups.EWOT_BLOCKS)).setRegistryName("jeb_wool"),
                 new BlockItem(jeb_carpet, new Item.Properties().group(EwotItemGroups.EWOT_BLOCKS)).setRegistryName("jeb_carpet"),
 
-                new BlockItem(aluminum_tank, new Item.Properties().group(EwotItemGroups.EWOT_BLOCKS)).setRegistryName("aluminum_tank"),
+                new AluminumTankBlockItem(aluminum_tank, new Item.Properties().group(EwotItemGroups.EWOT_BLOCKS)).setRegistryName("aluminum_tank"),
 
                 new BlockItem(crude_pinkite_machine_base, new Item.Properties().group(EwotItemGroups.EWOT_BLOCKS)).setRegistryName("crude_pinkite_machine_base"),
                 new BlockItem(crude_pinkite_furnace, new Item.Properties().group(EwotItemGroups.EWOT_BLOCKS)).setRegistryName("crude_pinkite_furnace")

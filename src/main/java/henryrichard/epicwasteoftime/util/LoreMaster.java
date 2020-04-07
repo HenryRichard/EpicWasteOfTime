@@ -6,11 +6,19 @@ import java.util.ArrayList;
 import java.util.List;
 
 public abstract class LoreMaster {
-    private static final String prefix = "item." + EwotMain.MODID + ".";
-    private static final String suffix = ".desc";
+    private static final String prefix = "item";
+    private static final String suffix = "desc";
 
     public static String getUnlocalizedLore(String name) {
-        return prefix + name + suffix;
+        return getUnlocalizedLore(prefix, name, suffix);
+    }
+
+    public static String getUnlocalizedLore(String name, String suffix) {
+        return getUnlocalizedLore(prefix, name, suffix);
+    }
+
+    public static String getUnlocalizedLore(String prefix, String name, String suffix) {
+        return prefix + "." + EwotMain.MODID + "." + name + "." + suffix;
     }
 
     public static String getUnlocalizedLore(String name, int index) {
