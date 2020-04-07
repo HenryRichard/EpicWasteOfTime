@@ -1,0 +1,11 @@
+{
+  "music_disc.strad": {
+    "category": "record",
+    "sounds": [
+      {
+        "name": "epicwasteoftime:music_disc/strad",
+        "stream": true
+      }
+    ]
+  }
+}

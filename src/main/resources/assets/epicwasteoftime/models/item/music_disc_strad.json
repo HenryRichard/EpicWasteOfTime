@@ -1,0 +1,7 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "epicwasteoftime:item/music_disc_base",
+    "layer1": "epicwasteoftime:item/music_disc_label_strad"
+  }
+}

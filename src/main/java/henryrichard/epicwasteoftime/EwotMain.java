@@ -3,6 +3,7 @@ package henryrichard.epicwasteoftime;
 import henryrichard.epicwasteoftime.init.EwotBlocks;
 import henryrichard.epicwasteoftime.init.EwotItems;
 import henryrichard.epicwasteoftime.init.EwotWorldGen;
+import henryrichard.epicwasteoftime.item.MusicDiscItem;
 import henryrichard.epicwasteoftime.world.feature.EwotFeatureConfigs;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.ComposterBlock;
@@ -61,6 +62,11 @@ public class EwotMain {
 
         //Initialize the feature configs
         EwotFeatureConfigs.init();
+
+        //Finish registering the new records
+        for(MusicDiscItem i : MusicDiscItem.NEW_RECORDS) {
+            net.minecraft.item.MusicDiscItem.RECORDS.put(i.getSound(), i);
+        }
     }
 
     public static void enqueueIMC(final InterModEnqueueEvent event) {

@@ -100,7 +100,7 @@ public abstract class EwotTools {
                 new ZwammahItem(new Item.Properties().group(EwotItemGroups.EWOT_TOOLS)).setRegistryName("zwammah"),
                 new TeleportingBookItem(new Item.Properties().group(EwotItemGroups.EWOT_TOOLS).maxStackSize(1).maxDamage(128)).setRegistryName("book_of_teleportation"),
 
-                new BucketItem(() -> EwotFluids.molten_pinkite, new Item.Properties().group(EwotItemGroups.EWOT_ITEMS).maxStackSize(1)).setRegistryName("molten_pinkite_bucket")
+                new BucketItem(() -> EwotFluids.molten_pinkite, new Item.Properties().group(EwotItemGroups.EWOT_TOOLS).maxStackSize(1)).setRegistryName("molten_pinkite_bucket")
         );
     }
 

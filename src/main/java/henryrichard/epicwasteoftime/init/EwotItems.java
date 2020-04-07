@@ -1,7 +1,7 @@
 package henryrichard.epicwasteoftime.init;
 
 import henryrichard.epicwasteoftime.EwotMain;
-import net.minecraft.item.BucketItem;
+import henryrichard.epicwasteoftime.item.MusicDiscItem;
 import net.minecraft.item.Item;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -34,6 +34,8 @@ public abstract class EwotItems {
     public static final Item zwammah_rod = null;
     public static final Item zwammah_hilt = null;
 
+    public static final Item music_disc_strad = null;
+
     @SubscribeEvent
     public static void registerItems(RegistryEvent.Register<Item> event) {
         event.getRegistry().registerAll(
@@ -55,7 +57,9 @@ public abstract class EwotItems {
 
                 new Item(new Item.Properties().group(EwotItemGroups.EWOT_ITEMS).maxStackSize(1)).setRegistryName("zwammah_head"),
                 new Item(new Item.Properties().group(EwotItemGroups.EWOT_ITEMS).maxStackSize(1)).setRegistryName("zwammah_rod"),
-                new Item(new Item.Properties().group(EwotItemGroups.EWOT_ITEMS).maxStackSize(1)).setRegistryName("zwammah_hilt")
+                new Item(new Item.Properties().group(EwotItemGroups.EWOT_ITEMS).maxStackSize(1)).setRegistryName("zwammah_hilt"),
+
+                new MusicDiscItem(1, () -> EwotSoundEvents.music_disc_strad, (new Item.Properties()).maxStackSize(1).group(EwotItemGroups.EWOT_ITEMS).rarity(RARE)).setRegistryName("music_disc_strad")
         );
     }
 
