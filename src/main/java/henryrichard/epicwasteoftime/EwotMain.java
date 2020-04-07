@@ -65,7 +65,7 @@ public class EwotMain {
 
         //Finish registering the new records
         for(MusicDiscItem i : MusicDiscItem.NEW_RECORDS) {
-            net.minecraft.item.MusicDiscItem.RECORDS.put(i.getSound(), i);
+            net.minecraft.item.MusicDiscItem.RECORDS.put(i.getSoundEvent(), i);
         }
     }
 

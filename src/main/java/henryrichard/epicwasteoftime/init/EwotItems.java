@@ -59,7 +59,7 @@ public abstract class EwotItems {
                 new Item(new Item.Properties().group(EwotItemGroups.EWOT_ITEMS).maxStackSize(1)).setRegistryName("zwammah_rod"),
                 new Item(new Item.Properties().group(EwotItemGroups.EWOT_ITEMS).maxStackSize(1)).setRegistryName("zwammah_hilt"),
 
-                new MusicDiscItem(1, () -> EwotSoundEvents.music_disc_strad, (new Item.Properties()).maxStackSize(1).group(EwotItemGroups.EWOT_ITEMS).rarity(RARE)).setRegistryName("music_disc_strad")
+                new MusicDiscItem(9, () -> EwotSoundEvents.music_disc_strad, (new Item.Properties()).maxStackSize(1).group(EwotItemGroups.EWOT_ITEMS).rarity(RARE)).setRegistryName("music_disc_strad")
         );
     }
 

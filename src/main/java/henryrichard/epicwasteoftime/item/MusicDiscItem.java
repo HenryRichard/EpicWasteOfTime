@@ -6,10 +6,11 @@ import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.SoundEvent;
 import net.minecraft.util.text.ITextComponent;
-import net.minecraft.util.text.Style;
 import net.minecraft.util.text.TextFormatting;
 import net.minecraft.util.text.TranslationTextComponent;
 import net.minecraft.world.World;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
 
 import javax.annotation.Nullable;
 import java.util.List;
@@ -31,11 +32,16 @@ public class MusicDiscItem extends net.minecraft.item.MusicDiscItem {
     @Override
     public void addInformation(ItemStack stack, @Nullable World worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn) {
         super.addInformation(stack, worldIn, tooltip, flagIn);
-        tooltip.add(new TranslationTextComponent(LoreMaster.getUnlocalizedLore("music_disc", "video_stream_note")).applyTextStyle(TextFormatting.GRAY).applyTextStyle(TextFormatting.ITALIC));
+        tooltip.add(new TranslationTextComponent(LoreMaster.getUnlocalizedLore("music_disc", "video_stream_note")).applyTextStyle(TextFormatting.DARK_GRAY).applyTextStyle(TextFormatting.ITALIC));
     }
 
     @Override
+    @OnlyIn(Dist.CLIENT)
     public SoundEvent getSound() {
+        return getSoundEvent();
+    }
+
+    public SoundEvent getSoundEvent() {
         return music.get();
     }
 }
