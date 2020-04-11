@@ -24,10 +24,12 @@ public class StrippableLogBlock extends LogBlock {
     @Override
     public ActionResultType onBlockActivated(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockRayTraceResult rayTraceResult) {
         ItemStack stack = player.getHeldItem(hand);
-        if(!world.isRemote && stack.getToolTypes().contains(ToolType.AXE)) {
-            world.playSound(null, pos, SoundEvents.ITEM_AXE_STRIP, SoundCategory.BLOCKS, 1.0F, 1.0F);
-            world.setBlockState(pos, stripResult.getValue().getDefaultState().with(LogBlock.AXIS, state.get(LogBlock.AXIS)));
-            stack.damageItem(1, player, playerEntity -> playerEntity.sendBreakAnimation(hand));
+        if(stack.getToolTypes().contains(ToolType.AXE)) {
+            if(!world.isRemote) {
+                world.playSound(null, pos, SoundEvents.ITEM_AXE_STRIP, SoundCategory.BLOCKS, 1.0F, 1.0F);
+                world.setBlockState(pos, stripResult.getValue().getDefaultState().with(LogBlock.AXIS, state.get(LogBlock.AXIS)));
+                stack.damageItem(1, player, playerEntity -> playerEntity.sendBreakAnimation(hand));
+            }
             return ActionResultType.SUCCESS;
         } else {
             return super.onBlockActivated(state, world, pos, player, hand, rayTraceResult);
