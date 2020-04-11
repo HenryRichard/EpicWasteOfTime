@@ -1,9 +1,9 @@
 {
-  "music_disc.strad": {
+  "music_disc.strad_remix": {
     "category": "record",
     "sounds": [
       {
-        "name": "epicwasteoftime:music_disc/strad",
+        "name": "epicwasteoftime:music_disc/strad_remix",
         "stream": true
       }
     ]

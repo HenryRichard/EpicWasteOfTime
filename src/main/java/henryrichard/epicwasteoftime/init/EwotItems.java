@@ -34,7 +34,7 @@ public abstract class EwotItems {
     public static final Item zwammah_rod = null;
     public static final Item zwammah_hilt = null;
 
-    public static final Item music_disc_strad = null;
+    public static final Item music_disc_strad_remix = null;
 
     @SubscribeEvent
     public static void registerItems(RegistryEvent.Register<Item> event) {
@@ -59,7 +59,7 @@ public abstract class EwotItems {
                 new Item(new Item.Properties().group(EwotItemGroups.EWOT_ITEMS).maxStackSize(1)).setRegistryName("zwammah_rod"),
                 new Item(new Item.Properties().group(EwotItemGroups.EWOT_ITEMS).maxStackSize(1)).setRegistryName("zwammah_hilt"),
 
-                new MusicDiscItem(9, () -> EwotSoundEvents.music_disc_strad, (new Item.Properties()).maxStackSize(1).group(EwotItemGroups.EWOT_ITEMS).rarity(RARE)).setRegistryName("music_disc_strad")
+                new MusicDiscItem(9, () -> EwotSoundEvents.music_disc_strad_remix, (new Item.Properties()).group(EwotItemGroups.EWOT_ITEMS).maxStackSize(1).rarity(RARE)).setRegistryName("music_disc_strad_remix")
         );
     }
 

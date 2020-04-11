@@ -30,6 +30,7 @@ public class MusicDiscItem extends net.minecraft.item.MusicDiscItem {
     }
 
     @Override
+    @OnlyIn(Dist.CLIENT)
     public void addInformation(ItemStack stack, @Nullable World worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn) {
         super.addInformation(stack, worldIn, tooltip, flagIn);
         tooltip.add(new TranslationTextComponent(LoreMaster.getUnlocalizedLore("music_disc", "video_stream_note")).applyTextStyle(TextFormatting.DARK_GRAY).applyTextStyle(TextFormatting.ITALIC));
