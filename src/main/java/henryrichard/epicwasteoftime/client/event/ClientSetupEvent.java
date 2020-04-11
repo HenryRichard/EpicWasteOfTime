@@ -1,12 +1,15 @@
 package henryrichard.epicwasteoftime.client.event;
 
 import henryrichard.epicwasteoftime.EwotMain;
+import henryrichard.epicwasteoftime.client.model.MaskedToolModel;
 import henryrichard.epicwasteoftime.client.render.tileentity.AluminumTankTileEntityRenderer;
 import henryrichard.epicwasteoftime.init.EwotTileEntities;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderTypeLookup;
+import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
+import net.minecraftforge.client.model.ModelLoaderRegistry;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.client.registry.ClientRegistry;
 import net.minecraftforge.fml.common.Mod;
@@ -38,5 +41,8 @@ public abstract class ClientSetupEvent {
 
         //Tile Entities
         ClientRegistry.bindTileEntityRenderer(EwotTileEntities.aluminum_tank, AluminumTankTileEntityRenderer::new);
+        
+        //Model Loaders
+        ModelLoaderRegistry.registerLoader(new ResourceLocation(EwotMain.MODID, "masked_tool"), MaskedToolModel.Loader.INSTANCE);
     }
 }

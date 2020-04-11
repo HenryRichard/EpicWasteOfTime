@@ -1,6 +1,7 @@
 {
     "parent": "item/handheld",
     "textures": {
-        "layer0": "epicwasteoftime:item/snow_spadaxe"
+        "layer0": "minecraft:item/wooden_pickaxe",
+        "layer1": "epicwasteoftime:item/snow_spadaxe"
     }
 }

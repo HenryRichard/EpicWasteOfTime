@@ -1,6 +1,10 @@
 {
-    "parent": "item/handheld",
+    "parent": "forge:item/default-tool",
+    "loader": "epicwasteoftime:masked_tool",
     "textures": {
-        "layer0": "epicwasteoftime:item/snow_axe"
+        "handle": "minecraft:item/wooden_axe",
+        "handle_mask": "epicwasteoftime:item/mask/axe_handle",
+        "head": "epicwasteoftime:item/snow_axe",
+        "particle": "minecraft:item/stick"
     }
 }
