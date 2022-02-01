@@ -1,19 +1,20 @@
 package henryrichard.epicwasteoftime.item.weapon;
 
+import com.google.common.collect.ImmutableMultimap;
 import com.google.common.collect.Multimap;
-import henryrichard.epicwasteoftime.EwotMain;
 import henryrichard.epicwasteoftime.item.EwotItemTier;
 import net.minecraft.block.BlockState;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.util.ITooltipFlag;
+import net.minecraft.enchantment.IVanishable;
 import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.SharedMonsterAttributes;
+import net.minecraft.entity.ai.attributes.Attribute;
 import net.minecraft.entity.ai.attributes.AttributeModifier;
+import net.minecraft.entity.ai.attributes.Attributes;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Rarity;
-import net.minecraft.item.SwordItem;
 import net.minecraft.item.TieredItem;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.text.ITextComponent;
@@ -25,13 +26,20 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 import javax.annotation.Nullable;
 import java.util.List;
 
-public class ZwammahItem extends TieredItem {
+public class ZwammahItem extends TieredItem implements IVanishable {
 
-    private final float attackDamage = 13;
-    private final float attackSpeed = -3.5f;
+    private final double attackDamage = 13d;
+    private final double attackSpeed = -3.5d;
+
+    private final Multimap<Attribute, AttributeModifier> attributeModifiers;
 
     public ZwammahItem(Properties builder) {
         super(EwotItemTier.ZWAMMAH, builder);
+
+        ImmutableMultimap.Builder<Attribute, AttributeModifier> aMB = ImmutableMultimap.builder();
+        aMB.put(Attributes.ATTACK_DAMAGE, new AttributeModifier(ATTACK_DAMAGE_MODIFIER, "Weapon modifier", this.attackDamage, AttributeModifier.Operation.ADDITION));
+        aMB.put(Attributes.ATTACK_SPEED, new AttributeModifier(ATTACK_SPEED_MODIFIER, "Weapon modifier", this.attackSpeed, AttributeModifier.Operation.ADDITION));
+        attributeModifiers = aMB.build();
     }
 
     @Override
@@ -46,14 +54,15 @@ public class ZwammahItem extends TieredItem {
             tooltip.add(new TranslationTextComponent(this.getTranslationKey() + ".desc." + i));
         }
         String worldName;
-        if(Minecraft.getInstance().isSingleplayer()) {
-            worldName = Minecraft.getInstance().getIntegratedServer().getWorldName();
-        } else {
+
+       try {
+           //TODO: This ain't it
+            worldName = Minecraft.getInstance().getIntegratedServer().getServerConfiguration().getWorldName();
+        } catch(NullPointerException e) {
             worldName = "Minecraft";
         }
-        if(Minecraft.getInstance().isSingleplayer()) {
-            tooltip.add(new TranslationTextComponent(this.getTranslationKey() + ".desc.5", Minecraft.getInstance().getIntegratedServer().getWorldName()));
-        }
+
+        tooltip.add(new TranslationTextComponent(this.getTranslationKey() + ".desc.5", worldName));
     }
 
     @Override
@@ -65,14 +74,8 @@ public class ZwammahItem extends TieredItem {
      * Gets a map of item attribute modifiers, used by ItemSword to increase hit damage.
      */
     @Override
-    public Multimap<String, AttributeModifier> getAttributeModifiers(EquipmentSlotType equipmentSlot, ItemStack stack) {
-        Multimap<String, AttributeModifier> multimap = super.getAttributeModifiers(equipmentSlot, stack);
-        if (equipmentSlot == EquipmentSlotType.MAINHAND) {
-            multimap.put(SharedMonsterAttributes.ATTACK_DAMAGE.getName(), new AttributeModifier(ATTACK_DAMAGE_MODIFIER, "Weapon modifier", (double)this.attackDamage, AttributeModifier.Operation.ADDITION));
-            multimap.put(SharedMonsterAttributes.ATTACK_SPEED.getName(), new AttributeModifier(ATTACK_SPEED_MODIFIER, "Weapon modifier", (double)this.attackSpeed, AttributeModifier.Operation.ADDITION));
-        }
-
-        return multimap;
+    public Multimap<Attribute, AttributeModifier> getAttributeModifiers(EquipmentSlotType equipmentSlot) {
+        return equipmentSlot == EquipmentSlotType.MAINHAND ? this.attributeModifiers : super.getAttributeModifiers(equipmentSlot);
     }
 
     @Override

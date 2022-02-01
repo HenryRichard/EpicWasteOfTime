@@ -11,8 +11,8 @@ import net.minecraftforge.registries.ObjectHolder;
 
 import static net.minecraft.enchantment.Enchantment.Rarity.*;
 
-@Mod.EventBusSubscriber(modid = EwotMain.MODID, bus = Mod.EventBusSubscriber.Bus.MOD)
-@ObjectHolder(EwotMain.MODID)
+@Mod.EventBusSubscriber(modid = EwotMain.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
+@ObjectHolder(EwotMain.MOD_ID)
 public abstract class EwotEnchantments {
 
     public static final Enchantment uplifting = null;

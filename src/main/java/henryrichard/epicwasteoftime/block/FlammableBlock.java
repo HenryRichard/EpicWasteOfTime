@@ -1,16 +1,22 @@
 package henryrichard.epicwasteoftime.block;
 
+import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.FireBlock;
-import net.minecraft.item.DyeColor;
 import net.minecraft.util.Direction;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockReader;
 
-public class CarpetBlock extends net.minecraft.block.CarpetBlock {
-    public CarpetBlock(DyeColor color, Properties properties) {
-        super(color, properties);
+public class FlammableBlock extends Block {
+
+    private final int flammability;
+    private final int spreadSpeed;
+
+    public FlammableBlock(Properties properties, int flammability, int spreadSpeed) {
+        super(properties);
+        this.flammability = flammability;
+        this.spreadSpeed = spreadSpeed;
     }
 
     /**
@@ -25,7 +31,7 @@ public class CarpetBlock extends net.minecraft.block.CarpetBlock {
      */
     public int getFlammability(BlockState state, IBlockReader world, BlockPos pos, Direction face)
     {
-        return ((FireBlock) Blocks.FIRE).getFlammability(Blocks.WHITE_CARPET.getDefaultState());
+        return flammability;
     }
 
     /**
@@ -55,6 +61,7 @@ public class CarpetBlock extends net.minecraft.block.CarpetBlock {
      */
     public int getFireSpreadSpeed(BlockState state, IBlockReader world, BlockPos pos, Direction face)
     {
-        return ((FireBlock)Blocks.FIRE).getFireSpreadSpeed(Blocks.WHITE_CARPET.getDefaultState());
+        return spreadSpeed;
     }
+
 }

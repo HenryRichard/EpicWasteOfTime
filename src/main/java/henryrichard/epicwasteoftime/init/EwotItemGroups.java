@@ -9,7 +9,7 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 public abstract class EwotItemGroups extends ItemGroup {
 
     private EwotItemGroups(String label) {
-        super(EwotMain.MODID + "." +label);
+        super(EwotMain.MOD_ID + "." +label);
     }
 
     public static final ItemGroup EWOT_BLOCKS = new EwotItemGroups("blocks") {

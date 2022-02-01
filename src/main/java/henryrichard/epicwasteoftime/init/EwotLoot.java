@@ -1,15 +1,15 @@
 package henryrichard.epicwasteoftime.init;
 
 import henryrichard.epicwasteoftime.EwotMain;
+import net.minecraft.loot.LootEntry;
+import net.minecraft.loot.LootPool;
+import net.minecraft.loot.TableLootEntry;
 import net.minecraft.util.ResourceLocation;
-import net.minecraft.world.storage.loot.LootEntry;
-import net.minecraft.world.storage.loot.LootPool;
-import net.minecraft.world.storage.loot.TableLootEntry;
 import net.minecraftforge.event.LootTableLoadEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 
-@Mod.EventBusSubscriber(modid = EwotMain.MODID, bus = Mod.EventBusSubscriber.Bus.FORGE)
+@Mod.EventBusSubscriber(modid = EwotMain.MOD_ID, bus = Mod.EventBusSubscriber.Bus.FORGE)
 public abstract class EwotLoot {
 
     @SubscribeEvent
@@ -37,7 +37,7 @@ public abstract class EwotLoot {
     }
 
     private static LootEntry.Builder getInjectEntry(String name, int weight) {
-        ResourceLocation table = new ResourceLocation(EwotMain.MODID, "inject/" + name);
+        ResourceLocation table = new ResourceLocation(EwotMain.MOD_ID, "inject/" + name);
         return TableLootEntry.builder(table)
                 .weight(weight);
     }

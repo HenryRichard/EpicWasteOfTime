@@ -28,7 +28,7 @@ import net.minecraftforge.fml.event.lifecycle.GatherDataEvent;
 import java.util.Iterator;
 import java.util.function.Consumer;
 
-@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, modid = EwotMain.MODID)
+@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, modid = EwotMain.MOD_ID)
 public abstract class DataGen {
 
     @SubscribeEvent
@@ -58,13 +58,13 @@ public abstract class DataGen {
                     .patternLine("XX")
                     .key('X', EwotBlocks.glowwool)
                     .addCriterion("has_glowwool", hasItem(EwotBlocks.glowwool))
-                    .build(consumer, new ResourceLocation(EwotMain.MODID, "glowwool_carpet"));
+                    .build(consumer, new ResourceLocation(EwotMain.MOD_ID, "glowwool_carpet"));
 
             ShapedRecipeBuilder.shapedRecipe(EwotBlocks.jeb_carpet, 3)
                     .patternLine("XX")
                     .key('X', EwotBlocks.jeb_wool)
                     .addCriterion("has_jeb_wool", hasItem(EwotBlocks.jeb_wool))
-                    .build(consumer, new ResourceLocation(EwotMain.MODID, "jeb_carpet"));
+                    .build(consumer, new ResourceLocation(EwotMain.MOD_ID, "jeb_carpet"));
 
             CustomRecipeBuilder.customRecipe((SpecialRecipeSerializer<?>) EwotRecipes.crafting_special_lava_from_lavaleaves).build(consumer, "epicwasteoftime:lava_from_lavaleaves");
 
@@ -73,7 +73,7 @@ public abstract class DataGen {
             ShapelessRecipeBuilder.shapelessRecipe(EwotBlocks.lavaleaf_planks)
                     .addIngredient(EwotTags.Items.LAVALEAF_LOGS)
                     .addCriterion("has_lavaleaf_logs", hasItem(EwotTags.Items.LAVALEAF_LOGS))
-                    .build(consumer, new ResourceLocation(EwotMain.MODID, WOOD_PATH + "lavaleaf/lavaleaf_planks"));
+                    .build(consumer, new ResourceLocation(EwotMain.MOD_ID, WOOD_PATH + "lavaleaf/lavaleaf_planks"));
 
             this.addSlabAndStairs(consumer, "lavaleaf", Ingredient.fromItems(EwotBlocks.lavaleaf_planks),
                     "lavaleaf_planks", Ingredient.fromItems(EwotBlocks.lavaleaf_planks),"wooden",
@@ -85,22 +85,23 @@ public abstract class DataGen {
                     .patternLine("XX")
                     .key('X', EwotBlocks.lavaleaf_log)
                     .addCriterion("has_lavaleaf_log", hasItem(EwotBlocks.lavaleaf_log))
-                    .build(consumer, new ResourceLocation(EwotMain.MODID, WOOD_PATH + "lavaleaf/lavaleaf_wood"));
+                    .build(consumer, new ResourceLocation(EwotMain.MOD_ID, WOOD_PATH + "lavaleaf/lavaleaf_wood"));
 
             ShapedRecipeBuilder.shapedRecipe(EwotBlocks.stripped_lavaleaf_wood)
                     .patternLine("XX")
                     .patternLine("XX")
                     .key('X', EwotBlocks.stripped_lavaleaf_log)
                     .addCriterion("has_stripped_lavaleaf_log", hasItem(EwotBlocks.stripped_lavaleaf_log))
-                    .build(consumer, new ResourceLocation(EwotMain.MODID, WOOD_PATH + "lavaleaf/strippped_lavaleaf_wood"));
+                    .build(consumer, new ResourceLocation(EwotMain.MOD_ID, WOOD_PATH + "lavaleaf/strippped_lavaleaf_wood"));
 
 
 
             //These will need to have their furnace recipe count changed; to make the code generate that would be too much work and I'm lazy lol
-            addChainmailRecipe(EwotItems.endite_chainmail, EwotItems.endite_nugget, Ingredient.fromTag(EwotTags.Items.NUGGETS_ENDITE), IngredientHelper.fromTags(EwotTags.Items.INGOTS_ENDITE, EwotTags.Items.NUGGETS_ENDITE), "endite", consumer);
-            addChainmailRecipe(EwotItems.pinkite_chainmail, EwotItems.pinkite_nugget, Ingredient.fromTag(EwotTags.Items.NUGGETS_PINKITE), IngredientHelper.fromTags(EwotTags.Items.INGOTS_PINKITE, EwotTags.Items.NUGGETS_PINKITE), "pinkite", consumer);
-            addChainmailRecipe(EwotItems.iron_chainmail, Items.IRON_NUGGET, Ingredient.fromTag(Tags.Items.NUGGETS_IRON), IngredientHelper.fromTags(Tags.Items.INGOTS_IRON, Tags.Items.NUGGETS_IRON), "iron", consumer);
-            addChainmailRecipe(EwotItems.golden_chainmail, Items.GOLD_NUGGET, Ingredient.fromTag(Tags.Items.NUGGETS_GOLD), IngredientHelper.fromTags(Tags.Items.INGOTS_GOLD, Tags.Items.NUGGETS_GOLD), "gold", consumer);
+            //Commenting these out because they broke
+            //addChainmailRecipe(EwotItems.endite_chainmail, EwotItems.endite_nugget, Ingredient.fromTag(EwotTags.Items.NUGGETS_ENDITE), IngredientHelper.fromTags(EwotTags.Items.INGOTS_ENDITE, EwotTags.Items.NUGGETS_ENDITE), "endite", consumer);
+            //addChainmailRecipe(EwotItems.pinkite_chainmail, EwotItems.pinkite_nugget, Ingredient.fromTag(EwotTags.Items.NUGGETS_PINKITE), IngredientHelper.fromTags(EwotTags.Items.INGOTS_PINKITE, EwotTags.Items.NUGGETS_PINKITE), "pinkite", consumer);
+            //addChainmailRecipe(EwotItems.iron_chainmail, Items.IRON_NUGGET, Ingredient.fromTag(Tags.Items.NUGGETS_IRON), IngredientHelper.fromTags(Tags.Items.INGOTS_IRON, Tags.Items.NUGGETS_IRON), "iron", consumer);
+            //addChainmailRecipe(EwotItems.golden_chainmail, Items.GOLD_NUGGET, Ingredient.fromTag(Tags.Items.NUGGETS_GOLD), IngredientHelper.fromTags(Tags.Items.INGOTS_GOLD, Tags.Items.NUGGETS_GOLD), "gold", consumer);
 
             addOreRecipes("aluminum",
                     Ingredient.fromTag(EwotTags.Items.ORE_ALUMINUM),
@@ -147,12 +148,12 @@ public abstract class DataGen {
                     .patternLine("XXX")
                     .key('X', EwotTags.Items.INGOTS_ENDITE)
                     .addCriterion("has_endite_ingot", hasItem(EwotTags.Items.INGOTS_ENDITE))
-                    .build(consumer, new ResourceLocation(EwotMain.MODID, ORE_PATH + "endite/endite_block_from_ingots"));
+                    .build(consumer, new ResourceLocation(EwotMain.MOD_ID, ORE_PATH + "endite/endite_block_from_ingots"));
 
             ShapelessRecipeBuilder.shapelessRecipe(EwotItems.endite_ingot, 9)
                     .addIngredient(EwotTags.Items.STORAGE_BLOCKS_ENDITE)
                     .addCriterion("has_endite_block", hasItem(EwotTags.Items.STORAGE_BLOCKS_ENDITE))
-                    .build(consumer, new ResourceLocation(EwotMain.MODID, ORE_PATH + "endite/endite_ingot_from_block"));
+                    .build(consumer, new ResourceLocation(EwotMain.MOD_ID, ORE_PATH + "endite/endite_ingot_from_block"));
 
             ShapedRecipeBuilder.shapedRecipe(EwotItems.endite_ingot)
                     .patternLine("XXX")
@@ -160,12 +161,12 @@ public abstract class DataGen {
                     .patternLine("XXX")
                     .key('X', EwotTags.Items.NUGGETS_ENDITE)
                     .addCriterion("has_endite_nugget", hasItem(EwotTags.Items.NUGGETS_ENDITE))
-                    .build(consumer, new ResourceLocation(EwotMain.MODID, ORE_PATH + "endite/endite_ingot_from_nuggets"));
+                    .build(consumer, new ResourceLocation(EwotMain.MOD_ID, ORE_PATH + "endite/endite_ingot_from_nuggets"));
 
             ShapelessRecipeBuilder.shapelessRecipe(EwotItems.endite_nugget, 9)
                     .addIngredient(EwotTags.Items.INGOTS_ENDITE)
                     .addCriterion("has_endite_ingot", hasItem(EwotTags.Items.INGOTS_ENDITE))
-                    .build(consumer, new ResourceLocation(EwotMain.MODID, ORE_PATH + "endite/endite_nugget"));
+                    .build(consumer, new ResourceLocation(EwotMain.MOD_ID, ORE_PATH + "endite/endite_nugget"));
 
             ShapedRecipeBuilder.shapedRecipe(EwotBlocks.unalloyed_endite_block)
                     .patternLine("XXX")
@@ -173,12 +174,12 @@ public abstract class DataGen {
                     .patternLine("XXX")
                     .key('X', EwotTags.Items.INGOTS_UNALLOYED_ENDITE)
                     .addCriterion("has_unalloyed_endite_ingot", hasItem(EwotTags.Items.INGOTS_UNALLOYED_ENDITE))
-                    .build(consumer, new ResourceLocation(EwotMain.MODID, ORE_PATH + "endite/unalloyed_endite_block"));
+                    .build(consumer, new ResourceLocation(EwotMain.MOD_ID, ORE_PATH + "endite/unalloyed_endite_block"));
 
             ShapelessRecipeBuilder.shapelessRecipe(EwotItems.unalloyed_endite_ingot, 9)
                     .addIngredient(EwotTags.Items.STORAGE_BLOCKS_UNALLOYED_ENDITE)
                     .addCriterion("has_unalloyed_endite_block", hasItem(EwotTags.Items.STORAGE_BLOCKS_UNALLOYED_ENDITE))
-                    .build(consumer, new ResourceLocation(EwotMain.MODID, ORE_PATH + "endite/unalloyed_endite_ingot_from_block"));
+                    .build(consumer, new ResourceLocation(EwotMain.MOD_ID, ORE_PATH + "endite/unalloyed_endite_ingot_from_block"));
 
             ShapelessRecipeBuilder.shapelessRecipe(EwotItems.unalloyed_endite_ingot, 1)
                     .addIngredient(EwotTags.Items.DUST_ENDUST)
@@ -191,13 +192,13 @@ public abstract class DataGen {
                     .addIngredient(Tags.Items.INGOTS_IRON)
                     .addIngredient(Tags.Items.INGOTS_GOLD)
                     .addCriterion("has_gone_to_outer_end", EnterBlockTrigger.Instance.forBlock(Blocks.END_GATEWAY))
-                    .build(consumer, new ResourceLocation(EwotMain.MODID, ORE_PATH + "endite/unalloyed_endite_ingot"));
+                    .build(consumer, new ResourceLocation(EwotMain.MOD_ID, ORE_PATH + "endite/unalloyed_endite_ingot"));
 
             CookingRecipeBuilder.blastingRecipe(Ingredient.fromTag(EwotTags.Items.INGOTS_UNALLOYED_ENDITE), EwotItems.endite_ingot, 4f, 200).addCriterion("has_unalloyed_endite", hasItem(EwotTags.Items.INGOTS_UNALLOYED_ENDITE))
-                    .build(consumer, new ResourceLocation(EwotMain.MODID, ORE_PATH + "endite/endite_ingot_from_blasting"));
+                    .build(consumer, new ResourceLocation(EwotMain.MOD_ID, ORE_PATH + "endite/endite_ingot_from_blasting"));
 
             CookingRecipeBuilder.blastingRecipe(Ingredient.fromTag(EwotTags.Items.STORAGE_BLOCKS_UNALLOYED_ENDITE), EwotBlocks.endite_block, 32f, 1000).addCriterion("has_unalloyed_endite", hasItem(EwotTags.Items.INGOTS_UNALLOYED_ENDITE))
-                    .build(consumer, new ResourceLocation(EwotMain.MODID, ORE_PATH + "endite/endite_block_from_blasting"));
+                    .build(consumer, new ResourceLocation(EwotMain.MOD_ID, ORE_PATH + "endite/endite_block_from_blasting"));
 
             this.addFullToolSet(consumer, "amethyst", Ingredient.fromTag(EwotTags.Items.GEMS_AMETHYST),
                     EwotTools.amethyst_sword,
@@ -287,8 +288,8 @@ public abstract class DataGen {
         }
 
         private void addSlabAndStairs(Consumer<IFinishedRecipe> consumer, String name, Ingredient material, String triggerName, Ingredient trigger, String group, String path, IItemProvider slab, IItemProvider stairs) {
-            ShapedRecipeBuilder.shapedRecipe(slab, 6).key('#', material).patternLine("###").setGroup(group + "_slab").addCriterion("has_" + triggerName, this.hasIngredient(trigger)).build(consumer, new ResourceLocation(EwotMain.MODID, path + name + "_slab"));
-            ShapedRecipeBuilder.shapedRecipe(stairs, 4).key('#', material).patternLine("#  ").patternLine("## ").patternLine("###").setGroup(group + "_stairs").addCriterion("has_" + triggerName, this.hasIngredient(trigger)).build(consumer, new ResourceLocation(EwotMain.MODID, path + name + "_stairs"));
+            ShapedRecipeBuilder.shapedRecipe(slab, 6).key('#', material).patternLine("###").setGroup(group + "_slab").addCriterion("has_" + triggerName, this.hasIngredient(trigger)).build(consumer, new ResourceLocation(EwotMain.MOD_ID, path + name + "_slab"));
+            ShapedRecipeBuilder.shapedRecipe(stairs, 4).key('#', material).patternLine("#  ").patternLine("## ").patternLine("###").setGroup(group + "_stairs").addCriterion("has_" + triggerName, this.hasIngredient(trigger)).build(consumer, new ResourceLocation(EwotMain.MOD_ID, path + name + "_stairs"));
         }
 
         private static final String CHAINMAIL_PATH = MATERIALS_PATH + "chainmail/";
@@ -299,10 +300,10 @@ public abstract class DataGen {
                     .patternLine("X X")
                     .key('X', material)
                     .addCriterion("has_" + name, this.hasIngredient(trigger))
-                    .build(consumer, new ResourceLocation(EwotMain.MODID, CHAINMAIL_PATH + chainmail.getRegistryName().getPath()));
+                    .build(consumer, new ResourceLocation(EwotMain.MOD_ID, CHAINMAIL_PATH + chainmail.getRegistryName().getPath()));
 
-            CookingRecipeBuilder.smeltingRecipe(Ingredient.fromItems(chainmail), nugget, 0.1f, 200).addCriterion("has_" + chainmail.getRegistryName().getPath(), this.hasItem(chainmail)).build(consumer, new ResourceLocation(EwotMain.MODID, CHAINMAIL_PATH + nugget.getRegistryName().getPath() + "_from_chainmail_smelting"));
-            CookingRecipeBuilder.blastingRecipe(Ingredient.fromItems(chainmail), nugget, 0.1f, 100).addCriterion("has_" + chainmail.getRegistryName().getPath(), this.hasItem(chainmail)).build(consumer, new ResourceLocation(EwotMain.MODID, CHAINMAIL_PATH + nugget.getRegistryName().getPath() + "_from_chainmail_blasting"));
+            CookingRecipeBuilder.smeltingRecipe(Ingredient.fromItems(chainmail), nugget, 0.1f, 200).addCriterion("has_" + chainmail.getRegistryName().getPath(), this.hasItem(chainmail)).build(consumer, new ResourceLocation(EwotMain.MOD_ID, CHAINMAIL_PATH + nugget.getRegistryName().getPath() + "_from_chainmail_smelting"));
+            CookingRecipeBuilder.blastingRecipe(Ingredient.fromItems(chainmail), nugget, 0.1f, 100).addCriterion("has_" + chainmail.getRegistryName().getPath(), this.hasItem(chainmail)).build(consumer, new ResourceLocation(EwotMain.MOD_ID, CHAINMAIL_PATH + nugget.getRegistryName().getPath() + "_from_chainmail_blasting"));
         }
 
         private void addOreRecipes(String name, Ingredient ore, Ingredient ingot, Ingredient block, Item ingotResult, Item blockResult, Consumer<IFinishedRecipe> consumer) {
@@ -312,18 +313,18 @@ public abstract class DataGen {
                     .patternLine("XXX")
                     .key('X', ingot)
                     .addCriterion("has_" + ingotResult.getRegistryName().getPath(), hasIngredient(ingot))
-                    .build(consumer, new ResourceLocation(EwotMain.MODID, ORE_PATH + name + '/' + blockResult.getRegistryName().getPath()));
+                    .build(consumer, new ResourceLocation(EwotMain.MOD_ID, ORE_PATH + name + '/' + blockResult.getRegistryName().getPath()));
 
             ShapelessRecipeBuilder.shapelessRecipe(ingotResult, 9)
                     .addIngredient(block)
                     .addCriterion("has_" + blockResult.getRegistryName().getPath(), hasIngredient(block))
-                    .build(consumer, new ResourceLocation(EwotMain.MODID, ORE_PATH + name + '/' + ingotResult.getRegistryName().getPath() + "_from_block"));
+                    .build(consumer, new ResourceLocation(EwotMain.MOD_ID, ORE_PATH + name + '/' + ingotResult.getRegistryName().getPath() + "_from_block"));
 
             CookingRecipeBuilder.smeltingRecipe(ore, ingotResult, 0.7f, 200).addCriterion("has_" + name + "_ore", hasIngredient(ore))
-                    .build(consumer, new ResourceLocation(EwotMain.MODID, ORE_PATH + name + '/' + ingotResult.getRegistryName().getPath() + "_from_smelting"));
+                    .build(consumer, new ResourceLocation(EwotMain.MOD_ID, ORE_PATH + name + '/' + ingotResult.getRegistryName().getPath() + "_from_smelting"));
 
             CookingRecipeBuilder.blastingRecipe(ore, ingotResult, 0.7f, 100).addCriterion("has_" + name + "_ore", hasIngredient(ore))
-                    .build(consumer, new ResourceLocation(EwotMain.MODID, ORE_PATH + name + '/' + ingotResult.getRegistryName().getPath() + "_from_blasting"));
+                    .build(consumer, new ResourceLocation(EwotMain.MOD_ID, ORE_PATH + name + '/' + ingotResult.getRegistryName().getPath() + "_from_blasting"));
         }
 
         private void addOreRecipes(String name, Ingredient ore, Ingredient nugget, Ingredient ingot, Ingredient block, Item nuggetResult, Item ingotResult, Item blockResult, Consumer<IFinishedRecipe> consumer) {
@@ -333,12 +334,12 @@ public abstract class DataGen {
                     .patternLine("XXX")
                     .key('X', nugget)
                     .addCriterion("has_" + nuggetResult.getRegistryName().getPath(), hasIngredient(nugget))
-                    .build(consumer, new ResourceLocation(EwotMain.MODID, ORE_PATH + name + '/' + ingotResult.getRegistryName().getPath() + "_from_nuggets"));
+                    .build(consumer, new ResourceLocation(EwotMain.MOD_ID, ORE_PATH + name + '/' + ingotResult.getRegistryName().getPath() + "_from_nuggets"));
 
             ShapelessRecipeBuilder.shapelessRecipe(nuggetResult, 9)
                     .addIngredient(ingot)
                     .addCriterion("has_" + ingotResult.getRegistryName().getPath(), hasIngredient(ingot))
-                    .build(consumer, new ResourceLocation(EwotMain.MODID, ORE_PATH + name + '/' + nuggetResult.getRegistryName().getPath()));
+                    .build(consumer, new ResourceLocation(EwotMain.MOD_ID, ORE_PATH + name + '/' + nuggetResult.getRegistryName().getPath()));
 
             addOreRecipes(name, ore, ingot, block, ingotResult, blockResult, consumer);
         }
@@ -361,7 +362,7 @@ public abstract class DataGen {
 
                     .addCriterion("has_" + triggerName, this.hasIngredient(trigger))
 
-                    .build(consumer,  new ResourceLocation(EwotMain.MODID, "tools/" + name + "/" + name + "_sword"));
+                    .build(consumer,  new ResourceLocation(EwotMain.MOD_ID, "tools/" + name + "/" + name + "_sword"));
 
             ShapedRecipeBuilder.shapedRecipe(shovel)
                     .key('X', material)
@@ -373,7 +374,7 @@ public abstract class DataGen {
 
                     .addCriterion("has_" + triggerName, this.hasIngredient(trigger))
 
-                    .build(consumer,  new ResourceLocation(EwotMain.MODID, "tools/" + name + "/" + name + "_shovel"));
+                    .build(consumer,  new ResourceLocation(EwotMain.MOD_ID, "tools/" + name + "/" + name + "_shovel"));
 
             ShapedRecipeBuilder.shapedRecipe(pickaxe)
                     .key('X', material)
@@ -385,7 +386,7 @@ public abstract class DataGen {
 
                     .addCriterion("has_" + triggerName, this.hasIngredient(trigger))
 
-                    .build(consumer,  new ResourceLocation(EwotMain.MODID, "tools/" + name + "/" + name + "_pickaxe"));
+                    .build(consumer,  new ResourceLocation(EwotMain.MOD_ID, "tools/" + name + "/" + name + "_pickaxe"));
 
             ShapedRecipeBuilder.shapedRecipe(pickaxe)
                     .key('X', material)
@@ -397,7 +398,7 @@ public abstract class DataGen {
 
                     .addCriterion("has_" + triggerName, this.hasIngredient(trigger))
 
-                    .build(consumer,  new ResourceLocation(EwotMain.MODID, "tools/" + name + "/" + name + "_axe"));
+                    .build(consumer,  new ResourceLocation(EwotMain.MOD_ID, "tools/" + name + "/" + name + "_axe"));
 
             ShapedRecipeBuilder.shapedRecipe(hoe)
                     .key('X', material)
@@ -409,7 +410,7 @@ public abstract class DataGen {
 
                     .addCriterion("has_" + triggerName, this.hasIngredient(trigger))
 
-                    .build(consumer,  new ResourceLocation(EwotMain.MODID, "tools/" + name + "/" + name + "_hoe"));
+                    .build(consumer,  new ResourceLocation(EwotMain.MOD_ID, "tools/" + name + "/" + name + "_hoe"));
 
             this.addNewToolSet(consumer, name, material, triggerName, trigger, shovel, pickaxe, axe, hoe, spadaxe, mattock);
         }
@@ -430,7 +431,7 @@ public abstract class DataGen {
 
                     .addCriterion("has_" + triggerName, this.hasIngredient(trigger))
 
-                    .build(consumer,  new ResourceLocation(EwotMain.MODID, "tools/" + name + "/" + name + "_spadaxe_from_shovel"));
+                    .build(consumer,  new ResourceLocation(EwotMain.MOD_ID, "tools/" + name + "/" + name + "_spadaxe_from_shovel"));
 
             ShapedRecipeBuilder.shapedRecipe(spadaxe)
                     .key('X', material)
@@ -441,7 +442,7 @@ public abstract class DataGen {
 
                     .addCriterion("has_" + triggerName, this.hasIngredient(trigger))
 
-                    .build(consumer,  new ResourceLocation(EwotMain.MODID, "tools/" + name + "/" + name + "_spadaxe_from_pickaxe"));
+                    .build(consumer,  new ResourceLocation(EwotMain.MOD_ID, "tools/" + name + "/" + name + "_spadaxe_from_pickaxe"));
 
             ShapelessRecipeBuilder.shapelessRecipe(spadaxe)
                     .addIngredient(pickaxe)
@@ -449,7 +450,7 @@ public abstract class DataGen {
 
                     .addCriterion("has_" + triggerName, this.hasIngredient(trigger))
 
-                    .build(consumer,  new ResourceLocation(EwotMain.MODID, "tools/" + name + "/" + name + "_spadaxe_from_pickaxe_and_shovel"));
+                    .build(consumer,  new ResourceLocation(EwotMain.MOD_ID, "tools/" + name + "/" + name + "_spadaxe_from_pickaxe_and_shovel"));
 
             ShapedRecipeBuilder.shapedRecipe(mattock)
                     .key('X', material)
@@ -460,7 +461,7 @@ public abstract class DataGen {
 
                     .addCriterion("has_" + triggerName, this.hasIngredient(trigger))
 
-                    .build(consumer,  new ResourceLocation(EwotMain.MODID, "tools/" + name + "/" + name + "_mattock_from_axe"));
+                    .build(consumer,  new ResourceLocation(EwotMain.MOD_ID, "tools/" + name + "/" + name + "_mattock_from_axe"));
 
             ShapedRecipeBuilder.shapedRecipe(mattock)
                     .key('X', material)
@@ -471,7 +472,7 @@ public abstract class DataGen {
 
                     .addCriterion("has_" + triggerName, this.hasIngredient(trigger))
 
-                    .build(consumer,  new ResourceLocation(EwotMain.MODID, "tools/" + name + "/" + name + "_mattock_from_hoe"));
+                    .build(consumer,  new ResourceLocation(EwotMain.MOD_ID, "tools/" + name + "/" + name + "_mattock_from_hoe"));
 
             ShapelessRecipeBuilder.shapelessRecipe(mattock)
                     .addIngredient(axe)
@@ -479,7 +480,7 @@ public abstract class DataGen {
 
                     .addCriterion("has_" + triggerName, this.hasIngredient(trigger))
 
-                    .build(consumer,  new ResourceLocation(EwotMain.MODID, "tools/" + name + "/" + name + "_mattock_from_axe_and_hoe"));
+                    .build(consumer,  new ResourceLocation(EwotMain.MOD_ID, "tools/" + name + "/" + name + "_mattock_from_axe_and_hoe"));
         }
 
         private InventoryChangeTrigger.Instance hasIngredient(Ingredient ingredient) {

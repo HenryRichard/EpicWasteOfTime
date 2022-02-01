@@ -35,7 +35,7 @@ public enum EwotEnditeArmorMaterial implements IEnditeArmorMaterial {
         this.enchantability = enchantability;
         this.sound = sound;
         this.repairMaterial = new LazyValue<>(repairMaterial);
-        this.name = EwotMain.MODID + ":" + name;
+        this.name = EwotMain.MOD_ID + ":" + name;
         this.toughness = toughness;
     }
 
@@ -72,6 +72,12 @@ public enum EwotEnditeArmorMaterial implements IEnditeArmorMaterial {
     @Override
     public float getToughness() {
         return toughness;
+    }
+
+    //TODO: Implement this properly
+    @Override
+    public float getKnockbackResistance() {
+        return 0;
     }
 
     @Override

@@ -18,31 +18,15 @@ import java.util.function.Supplier;
 
 public class MusicDiscItem extends net.minecraft.item.MusicDiscItem {
 
-    public static final List<MusicDiscItem> NEW_RECORDS = Lists.newArrayList();
-
-    private final Supplier<SoundEvent> music;
-
+    @SuppressWarnings("ConstantConditions")
     public MusicDiscItem(int comparatorValueIn, Supplier<SoundEvent> soundIn, Properties builder) {
-        super(comparatorValueIn, null, builder);
-        music = soundIn;
-        RECORDS.remove(null); //Passing null up there adds null to the map; we don't want that
-        NEW_RECORDS.add(this); //We'll properly add the record to the map during common setup
+        super(comparatorValueIn, soundIn, builder);
     }
 
     @Override
     @OnlyIn(Dist.CLIENT)
     public void addInformation(ItemStack stack, @Nullable World worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn) {
         super.addInformation(stack, worldIn, tooltip, flagIn);
-        tooltip.add(new TranslationTextComponent(LoreMaster.getUnlocalizedLore("music_disc", "video_stream_note")).applyTextStyle(TextFormatting.DARK_GRAY).applyTextStyle(TextFormatting.ITALIC));
-    }
-
-    @Override
-    @OnlyIn(Dist.CLIENT)
-    public SoundEvent getSound() {
-        return getSoundEvent();
-    }
-
-    public SoundEvent getSoundEvent() {
-        return music.get();
+        tooltip.add(new TranslationTextComponent(LoreMaster.getUnlocalizedLore("music_disc", "video_stream_note")).mergeStyle(TextFormatting.DARK_GRAY).mergeStyle(TextFormatting.ITALIC));
     }
 }

@@ -5,7 +5,6 @@ import henryrichard.epicwasteoftime.fluid.FlowingFluid;
 import net.minecraft.block.FlowingFluidBlock;
 import net.minecraft.fluid.Fluid;
 import net.minecraft.util.ResourceLocation;
-import net.minecraft.util.SoundEvent;
 import net.minecraft.util.SoundEvents;
 import net.minecraft.world.IWorldReader;
 import net.minecraftforge.event.RegistryEvent;
@@ -18,8 +17,8 @@ import net.minecraftforge.registries.ObjectHolder;
 import javax.annotation.Nullable;
 import java.util.function.Function;
 
-@Mod.EventBusSubscriber(modid = EwotMain.MODID, bus = Mod.EventBusSubscriber.Bus.MOD)
-@ObjectHolder(EwotMain.MODID)
+@Mod.EventBusSubscriber(modid = EwotMain.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
+@ObjectHolder(EwotMain.MOD_ID)
 public abstract class EwotFluids {
 
     public static final Fluid molten_pinkite = null;
@@ -39,22 +38,22 @@ public abstract class EwotFluids {
                             () -> molten_pinkite,
                             () -> flowing_molten_pinkite,
                             FluidAttributes.builder(
-                                    new ResourceLocation(EwotMain.MODID, "fluid/molten_pinkite"),
-                                    new ResourceLocation(EwotMain.MODID,"fluid/flowing_molten_pinkite")
+                                    new ResourceLocation(EwotMain.MOD_ID, "fluid/molten_pinkite"),
+                                    new ResourceLocation(EwotMain.MOD_ID,"fluid/flowing_molten_pinkite")
                             )
                                 .density(7000)
                                 .luminosity(5)
                                 .temperature(940)
                                 .viscosity(6000)
                                 .sound(SoundEvents.ITEM_BUCKET_FILL_LAVA, SoundEvents.ITEM_BUCKET_EMPTY_LAVA)
-                                .translationKey("block." + EwotMain.MODID + ".molten_pinkite")
+                                .translationKey("block." + EwotMain.MOD_ID + ".molten_pinkite")
                     )
 
                         .levelDecreasePerBlock(2)
                         .explosionResistance(100)
                         .block(() -> (FlowingFluidBlock) EwotBlocks.molten_pinkite)
                         .bucket(() -> EwotTools.molten_pinkite_bucket),
-                    (world) -> world.getDimension().isNether() ? 10 : 30
+                    (world) -> world.getDimensionType().isUltrawarm() ? 10 : 30
             );
     }
 

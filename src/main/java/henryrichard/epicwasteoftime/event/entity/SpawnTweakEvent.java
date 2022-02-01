@@ -15,10 +15,10 @@ import net.minecraftforge.fml.common.Mod;
 
 import java.util.Random;
 
-@Mod.EventBusSubscriber(modid = EwotMain.MODID)
+@Mod.EventBusSubscriber(modid = EwotMain.MOD_ID)
 public abstract class SpawnTweakEvent {
 
-    private final static String SPAWN_TAG = EwotMain.MODID + ":spawned";
+    private final static String SPAWN_TAG = EwotMain.MOD_ID + ":spawned";
 
     @SubscribeEvent
     public static void onLivingSpawn(LivingSpawnEvent.SpecialSpawn event) {

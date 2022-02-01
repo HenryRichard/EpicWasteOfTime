@@ -18,7 +18,7 @@ public abstract class LoreMaster {
     }
 
     public static String getUnlocalizedLore(String prefix, String name, String suffix) {
-        return prefix + "." + EwotMain.MODID + "." + name + "." + suffix;
+        return prefix + "." + EwotMain.MOD_ID + "." + name + "." + suffix;
     }
 
     public static String getUnlocalizedLore(String name, int index) {

@@ -10,8 +10,8 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.registries.ObjectHolder;
 
-@Mod.EventBusSubscriber(modid = EwotMain.MODID, bus = Mod.EventBusSubscriber.Bus.MOD)
-@ObjectHolder(EwotMain.MODID)
+@Mod.EventBusSubscriber(modid = EwotMain.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
+@ObjectHolder(EwotMain.MOD_ID)
 public abstract class EwotTools {
 
     //Original
@@ -85,7 +85,7 @@ public abstract class EwotTools {
                 new EnditeShovelItem(EwotItemTier.ENDITE, 1.5F, -3.0f, new Item.Properties().group(EwotItemGroups.EWOT_TOOLS)).setRegistryName("endite_shovel"),
                 new EnditePickaxeItem(EwotItemTier.ENDITE, 1, -2.8f, new Item.Properties().group(EwotItemGroups.EWOT_TOOLS)).setRegistryName("endite_pickaxe"),
                 new EnditeAxeItem(EwotItemTier.ENDITE, 2.0f, -3.0f, new Item.Properties().group(EwotItemGroups.EWOT_TOOLS)).setRegistryName("endite_axe"),
-                new EnditeHoeItem(EwotItemTier.ENDITE, new Item.Properties().group(EwotItemGroups.EWOT_TOOLS)).setRegistryName("endite_hoe"),
+                new EnditeHoeItem(EwotItemTier.ENDITE, -3, 0.0F,  new Item.Properties().group(EwotItemGroups.EWOT_TOOLS)).setRegistryName("endite_hoe"),
                 new EnditeSpadaxeItem(EwotItemTier.ENDITE, new Item.Properties().group(EwotItemGroups.EWOT_TOOLS)).setRegistryName("endite_spadaxe"),
                 new EnditeMattockItem(EwotItemTier.ENDITE, 2.0f, -3.0f, new Item.Properties().group(EwotItemGroups.EWOT_TOOLS)).setRegistryName("endite_mattock")
         );
@@ -110,7 +110,7 @@ public abstract class EwotTools {
                 new ShovelItem(tier, 1.5F, -3.0f, new Item.Properties().group(EwotItemGroups.EWOT_TOOLS)).setRegistryName(name + "_shovel"),
                 new PickaxeItem(tier, 1, -2.8f, new Item.Properties().group(EwotItemGroups.EWOT_TOOLS)).setRegistryName(name + "_pickaxe"),
                 new AxeItem(tier, axeDamage, axeSpeed, new Item.Properties().group(EwotItemGroups.EWOT_TOOLS)).setRegistryName(name + "_axe"),
-                new HoeItem(tier, (float)(-3 + tier.getHarvestLevel()), new Item.Properties().group(EwotItemGroups.EWOT_TOOLS)).setRegistryName(name + "_hoe")
+                new HoeItem(tier, 1 - tier.getHarvestLevel(), (float)(-3 + tier.getHarvestLevel()), new Item.Properties().group(EwotItemGroups.EWOT_TOOLS)).setRegistryName(name + "_hoe")
         );
         registerNewToolSet(event, tier, axeDamage, axeSpeed, name);
     }

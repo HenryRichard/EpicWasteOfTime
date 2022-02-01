@@ -8,9 +8,10 @@ import net.minecraftforge.event.entity.living.LivingKnockBackEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 
-@Mod.EventBusSubscriber(modid = EwotMain.MODID, bus = Mod.EventBusSubscriber.Bus.FORGE)
+@Mod.EventBusSubscriber(modid = EwotMain.MOD_ID, bus = Mod.EventBusSubscriber.Bus.FORGE)
 public abstract class UpliftingEvent {
-
+    //TODO: Update to 1.16
+    /*
     @SuppressWarnings("ConstantConditions")
     @SubscribeEvent
     public static void upliftingKnockback(final LivingKnockBackEvent event) {
@@ -25,4 +26,6 @@ public abstract class UpliftingEvent {
             event.getEntityLiving().setMotion(0d, speedY, 0d);
         }
     }
+
+     */
 }

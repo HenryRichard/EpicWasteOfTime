@@ -9,8 +9,8 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.registries.ObjectHolder;
 
-@Mod.EventBusSubscriber(modid = EwotMain.MODID, bus = Mod.EventBusSubscriber.Bus.MOD)
-@ObjectHolder(EwotMain.MODID)
+@Mod.EventBusSubscriber(modid = EwotMain.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
+@ObjectHolder(EwotMain.MOD_ID)
 public abstract class EwotPotions {
 
     public static final Potion vertigo = null;
@@ -22,11 +22,11 @@ public abstract class EwotPotions {
     @SubscribeEvent
     public static void registerPotions(RegistryEvent.Register<Potion> event) {
         event.getRegistry().registerAll(
-            new Potion(EwotMain.MODID + ".vertigo", new EffectInstance(EwotEffects.vertigo, 600, 0)).setRegistryName("vertigo"),
-            new Potion(EwotMain.MODID + ".vertigo", new EffectInstance(EwotEffects.vertigo, 1200, 0)).setRegistryName("vertigo_long"),
-            new Potion(EwotMain.MODID + ".vertigo", new EffectInstance(EwotEffects.vertigo, 400, 1)).setRegistryName("vertigo_strong"),
+            new Potion(EwotMain.MOD_ID + ".vertigo", new EffectInstance(EwotEffects.vertigo, 600, 0)).setRegistryName("vertigo"),
+            new Potion(EwotMain.MOD_ID + ".vertigo", new EffectInstance(EwotEffects.vertigo, 1200, 0)).setRegistryName("vertigo_long"),
+            new Potion(EwotMain.MOD_ID + ".vertigo", new EffectInstance(EwotEffects.vertigo, 400, 1)).setRegistryName("vertigo_strong"),
 
-            new Potion(EwotMain.MODID + ".extreme_nausea", new EffectInstance(Effects.NAUSEA, 1200, 0), new EffectInstance(EwotEffects.vertigo, 1200, 2)).setRegistryName("extreme_nausea")
+            new Potion(EwotMain.MOD_ID + ".extreme_nausea", new EffectInstance(Effects.NAUSEA, 1200, 0), new EffectInstance(EwotEffects.vertigo, 1200, 2)).setRegistryName("extreme_nausea")
         );
     }
 

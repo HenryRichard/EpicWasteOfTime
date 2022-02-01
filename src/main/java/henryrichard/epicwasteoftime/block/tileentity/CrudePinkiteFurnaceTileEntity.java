@@ -2,6 +2,7 @@ package henryrichard.epicwasteoftime.block.tileentity;
 
 import henryrichard.epicwasteoftime.EwotMain;
 import henryrichard.epicwasteoftime.init.EwotTileEntities;
+import net.minecraft.block.BlockState;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.CompoundNBT;
 import net.minecraft.tileentity.ITickableTileEntity;
@@ -33,17 +34,17 @@ public class CrudePinkiteFurnaceTileEntity extends TileEntity implements ITickab
         if(!world.isRemote) {
             itemHandler.ifPresent(handler -> {
                 for (int i = 0; i < 3; i++)
-                    EwotMain.LOGGER.info(handler.getStackInSlot(i).getDisplayName().getFormattedText() + ": " + handler.getStackInSlot(i).getCount());
+                    EwotMain.LOGGER.info(handler.getStackInSlot(i).getDisplayName() + ": " + handler.getStackInSlot(i).getCount());
             });
         }
     }
 
     @Override
-    public void read(CompoundNBT compound) {
-        CompoundNBT inventoryCompound = compound.getCompound("inventory");
+    public void read(BlockState state, CompoundNBT nbt) {
+        CompoundNBT inventoryCompound = nbt.getCompound("inventory");
         itemHandler.ifPresent(handler -> handler.deserializeNBT(inventoryCompound));
 
-        super.read(compound);
+        super.read(state, nbt);
     }
 
     @Override

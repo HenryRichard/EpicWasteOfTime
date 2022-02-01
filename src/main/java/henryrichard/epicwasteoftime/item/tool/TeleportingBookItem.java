@@ -30,7 +30,7 @@ public class TeleportingBookItem extends Item {
         playerIn.getCooldownTracker().setCooldown(this, 20);
         if (!worldIn.isRemote) {
             EnderPearlEntity pearl = new EnderPearlEntity(worldIn, playerIn);
-            pearl.shoot(playerIn, playerIn.rotationPitch, playerIn.rotationYaw, 0.0F, 1.5F, 1.0F);
+            pearl.func_234612_a_(playerIn, playerIn.rotationPitch, playerIn.rotationYaw, 0.0F, 1.5F, 1.0F);
             worldIn.addEntity(pearl);
         }
 

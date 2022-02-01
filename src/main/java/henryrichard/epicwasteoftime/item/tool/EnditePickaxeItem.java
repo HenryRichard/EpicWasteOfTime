@@ -27,7 +27,7 @@ public class EnditePickaxeItem extends PickaxeItem implements IEnditeTool  {
      */
     @OnlyIn(Dist.CLIENT)
     public void addInformation(ItemStack stack, @Nullable World worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn) {
-        tooltip.add(new TranslationTextComponent(LoreMaster.getUnlocalizedLore("endite_tool")).applyTextStyle(TextFormatting.YELLOW));
+        tooltip.add(new TranslationTextComponent(LoreMaster.getUnlocalizedLore("endite_tool")).mergeStyle(TextFormatting.YELLOW));
     }
 
     @Override

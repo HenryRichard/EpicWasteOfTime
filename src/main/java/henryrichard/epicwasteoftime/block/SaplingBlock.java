@@ -25,11 +25,11 @@ public class SaplingBlock extends net.minecraft.block.SaplingBlock {
     }
 
     public SaplingBlock(Tree treeIn, Predicate<Block> validBlock, Properties properties) {
-        this(treeIn, PlantType.Plains, validBlock, properties);
+        this(treeIn, PlantType.PLAINS, validBlock, properties);
     }
 
     public SaplingBlock(Tree treeIn, Properties properties) {
-        this(treeIn, PlantType.Plains, properties);
+        this(treeIn, PlantType.PLAINS, properties);
     }
 
     protected boolean isValidGround(BlockState state, IBlockReader worldIn, BlockPos pos) {

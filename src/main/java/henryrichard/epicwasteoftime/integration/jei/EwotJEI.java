@@ -1,23 +1,13 @@
 package henryrichard.epicwasteoftime.integration.jei;
 
-import com.google.common.collect.Lists;
 import henryrichard.epicwasteoftime.EwotMain;
-import henryrichard.epicwasteoftime.init.EwotArmor;
-import henryrichard.epicwasteoftime.init.EwotItems;
-import henryrichard.epicwasteoftime.init.EwotTools;
-import henryrichard.epicwasteoftime.util.EwotTags;
 import mezz.jei.api.IModPlugin;
 import mezz.jei.api.JeiPlugin;
-import mezz.jei.api.constants.VanillaRecipeCategoryUid;
 import mezz.jei.api.registration.IRecipeRegistration;
-import net.minecraft.block.Blocks;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.Items;
-import net.minecraft.tags.ItemTags;
 import net.minecraft.tags.Tag;
 import net.minecraft.util.ResourceLocation;
-import net.minecraftforge.common.Tags;
 
 import java.util.*;
 import java.util.stream.Collectors;
@@ -27,7 +17,7 @@ public class EwotJEI implements IModPlugin {
 
     @Override
     public ResourceLocation getPluginUid() {
-        return new ResourceLocation(EwotMain.MODID, "ewotjei");
+        return new ResourceLocation(EwotMain.MOD_ID, "ewotjei");
     }
 
     @Override

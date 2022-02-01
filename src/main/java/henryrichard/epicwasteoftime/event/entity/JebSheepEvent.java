@@ -17,7 +17,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-@Mod.EventBusSubscriber(modid = EwotMain.MODID)
+@Mod.EventBusSubscriber(modid = EwotMain.MOD_ID)
 public abstract class JebSheepEvent {
 
     @SubscribeEvent

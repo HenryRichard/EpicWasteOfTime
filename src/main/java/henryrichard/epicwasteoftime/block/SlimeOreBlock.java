@@ -10,18 +10,17 @@ import net.minecraft.entity.monster.SlimeEntity;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
+import net.minecraft.loot.LootContext;
+import net.minecraft.loot.LootParameterSets;
+import net.minecraft.loot.LootParameters;
+import net.minecraft.loot.LootTable;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.Direction;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.Difficulty;
 import net.minecraft.world.GameRules;
-import net.minecraft.world.World;
 import net.minecraft.world.server.ServerWorld;
-import net.minecraft.world.storage.loot.LootContext;
-import net.minecraft.world.storage.loot.LootParameterSets;
-import net.minecraft.world.storage.loot.LootParameters;
-import net.minecraft.world.storage.loot.LootTable;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.common.util.FakePlayer;
@@ -45,7 +44,7 @@ public class SlimeOreBlock extends Block {
     }
 
     @Override
-    public void spawnAdditionalDrops(BlockState state, World world, BlockPos pos, ItemStack stack) {
+    public void spawnAdditionalDrops(BlockState state, ServerWorld world, BlockPos pos, ItemStack stack) {
         super.spawnAdditionalDrops(state, world, pos, stack);
         if (!world.isRemote && world.getGameRules().getBoolean(GameRules.DO_TILE_DROPS) && EnchantmentHelper.getEnchantmentLevel(Enchantments.SILK_TOUCH, stack) == 0) {
 
@@ -68,14 +67,13 @@ public class SlimeOreBlock extends Block {
                         int fortuneLevel = EnchantmentHelper.getEnchantmentLevel(Enchantments.FORTUNE, stack);
                         ItemStack weapon = new ItemStack(Items.IRON_SWORD);
                         EnchantmentHelper.setEnchantments(ImmutableMap.of(Enchantments.LOOTING, fortuneLevel), weapon);
-                        FakePlayer fakePlayer = FakePlayerFactory.getMinecraft((ServerWorld) world);
+                        FakePlayer fakePlayer = FakePlayerFactory.getMinecraft(world);
                         fakePlayer.setItemStackToSlot(EquipmentSlotType.MAINHAND, weapon);
 
                         LootTable loot = world.getServer().getLootTableManager().getLootTableFromLocation(entity.getLootTableResourceLocation());
-                        LootContext context = new LootContext.Builder((ServerWorld) world)
+                        LootContext context = new LootContext.Builder(world)
                                 .withRandom(world.getRandom())
                                 .withParameter(LootParameters.THIS_ENTITY, entity)
-                                .withParameter(LootParameters.POSITION, pos)
                                 .withParameter(LootParameters.DAMAGE_SOURCE, DamageSource.causePlayerDamage(fakePlayer))
                                 .build(LootParameterSets.ENTITY);
                         List<ItemStack> drops = loot.generate(context);

@@ -1,7 +1,6 @@
 package henryrichard.epicwasteoftime.client.event;
 
 import henryrichard.epicwasteoftime.EwotMain;
-import henryrichard.epicwasteoftime.client.model.MaskedToolModel;
 import henryrichard.epicwasteoftime.client.render.tileentity.AluminumTankTileEntityRenderer;
 import henryrichard.epicwasteoftime.init.EwotTileEntities;
 import net.minecraft.client.renderer.RenderType;
@@ -18,7 +17,7 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import static henryrichard.epicwasteoftime.init.EwotBlocks.*;
 
 @OnlyIn(Dist.CLIENT)
-@Mod.EventBusSubscriber(modid = EwotMain.MODID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
+@Mod.EventBusSubscriber(modid = EwotMain.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 public abstract class ClientSetupEvent {
 
     @SuppressWarnings("ConstantConditions")
@@ -43,6 +42,6 @@ public abstract class ClientSetupEvent {
         ClientRegistry.bindTileEntityRenderer(EwotTileEntities.aluminum_tank, AluminumTankTileEntityRenderer::new);
         
         //Model Loaders
-        ModelLoaderRegistry.registerLoader(new ResourceLocation(EwotMain.MODID, "masked_tool"), MaskedToolModel.Loader.INSTANCE);
+        //ModelLoaderRegistry.registerLoader(new ResourceLocation(EwotMain.MOD_ID, "masked_tool"), MaskedToolModel.Loader.INSTANCE);
     }
 }

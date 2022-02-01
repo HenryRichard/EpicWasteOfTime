@@ -1,6 +1,7 @@
 package henryrichard.epicwasteoftime.block.tileentity;
 
 import henryrichard.epicwasteoftime.init.EwotTileEntities;
+import net.minecraft.block.BlockState;
 import net.minecraft.nbt.CompoundNBT;
 import net.minecraft.network.NetworkManager;
 import net.minecraft.network.play.server.SUpdateTileEntityPacket;
@@ -31,9 +32,9 @@ public class AluminumTankTileEntity extends TileEntity implements ICapabilityPro
     }
 
     @Override
-    public void read(CompoundNBT tag) {
-        fluidHandler.ifPresent(handler -> handler.readFromNBT(tag.getCompound("Fluid")));
-        super.read(tag);
+    public void read(BlockState state, CompoundNBT nbt) {
+        fluidHandler.ifPresent(handler -> handler.readFromNBT(nbt.getCompound("Fluid")));
+        super.read(state, nbt);
     }
 
     @Override
@@ -56,9 +57,9 @@ public class AluminumTankTileEntity extends TileEntity implements ICapabilityPro
     }
 
     @Override
-    public void handleUpdateTag(CompoundNBT tag) {
+    public void handleUpdateTag(BlockState state, CompoundNBT tag) {
         fluidHandler.ifPresent(handler -> handler.readFromNBT(tag.getCompound("Fluid")));
-        super.handleUpdateTag(tag);
+        super.handleUpdateTag(state, tag);
     }
 
     @Nullable

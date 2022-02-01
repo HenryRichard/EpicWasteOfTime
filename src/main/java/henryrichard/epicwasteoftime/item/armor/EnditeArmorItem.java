@@ -28,7 +28,7 @@ public class EnditeArmorItem extends net.minecraft.item.ArmorItem {
      */
     @OnlyIn(Dist.CLIENT)
     public void addInformation(ItemStack stack, @Nullable World worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn) {
-        tooltip.add(new TranslationTextComponent(LoreMaster.getUnlocalizedLore("endite_armor")).applyTextStyle(TextFormatting.YELLOW));
+        tooltip.add(new TranslationTextComponent(LoreMaster.getUnlocalizedLore("endite_armor")).mergeStyle(TextFormatting.YELLOW));
     }
 
     @Override

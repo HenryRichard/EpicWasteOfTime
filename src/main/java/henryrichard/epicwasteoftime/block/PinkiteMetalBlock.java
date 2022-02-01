@@ -30,8 +30,8 @@ public class PinkiteMetalBlock extends MetalBlock implements IPinkiteBlock {
     }
 
     @Override
-    public int getLightValue(BlockState state) {
-        return state.get(POWERED) ? super.getLightValue(state) : 0;
+    public int getLightValue(BlockState state, IBlockReader world, BlockPos pos) {
+        return state.get(POWERED) ? super.getLightValue(state, world, pos) : 0;
     }
 
     @Override
@@ -53,7 +53,7 @@ public class PinkiteMetalBlock extends MetalBlock implements IPinkiteBlock {
                 if (on) {
                     worldIn.getPendingBlockTicks().scheduleTick(pos, this, 4);
                 } else {
-                    worldIn.setBlockState(pos, state.cycle(POWERED), 2);
+                    worldIn.setBlockState(pos, state.func_235896_a_(POWERED), 2);
                 }
             }
 
@@ -63,7 +63,7 @@ public class PinkiteMetalBlock extends MetalBlock implements IPinkiteBlock {
     @Override
     public void tick(BlockState state, ServerWorld worldIn, BlockPos pos, Random rand) {
         if (state.get(POWERED) && !worldIn.isBlockPowered(pos)) {
-            worldIn.setBlockState(pos, state.cycle(POWERED), 2);
+            worldIn.setBlockState(pos, state.func_235896_a_(POWERED), 2);
         }
 
     }
@@ -73,10 +73,6 @@ public class PinkiteMetalBlock extends MetalBlock implements IPinkiteBlock {
         builder.add(POWERED);
     }
 
-    @Override
-    public boolean canEntitySpawn(BlockState state, IBlockReader worldIn, BlockPos pos, EntityType<?> type) {
-        return true;
-    }
 
     public boolean isPowered(BlockState state, World worldIn, BlockPos pos) {
         return state.get(POWERED);

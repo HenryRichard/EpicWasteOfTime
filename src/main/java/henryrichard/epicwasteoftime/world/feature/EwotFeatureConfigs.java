@@ -3,12 +3,13 @@ package henryrichard.epicwasteoftime.world.feature;
 import henryrichard.epicwasteoftime.init.EwotBlocks;
 import net.minecraft.world.gen.blockstateprovider.SimpleBlockStateProvider;
 import net.minecraft.world.gen.blockstateprovider.WeightedBlockStateProvider;
-import net.minecraft.world.gen.feature.TreeFeatureConfig;
 import net.minecraft.world.gen.foliageplacer.BlobFoliagePlacer;
 import net.minecraftforge.common.IPlantable;
 
 public class EwotFeatureConfigs {
 
+    //TODO: Update for 1.16
+    /*
     public static TreeFeatureConfig LAVALEAF_TREE_CONFIG = null;
 
     @SuppressWarnings("ConstantConditions")
@@ -21,4 +22,5 @@ public class EwotFeatureConfigs {
                  new BlobFoliagePlacer(2, 0)))
                  .baseHeight(5).heightRandA(2).foliageHeight(3).ignoreVines().setSapling((IPlantable) EwotBlocks.lavaleaf_sapling).build();
     }
+     */
 }

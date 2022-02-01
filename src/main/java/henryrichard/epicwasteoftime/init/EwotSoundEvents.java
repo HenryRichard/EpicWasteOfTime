@@ -8,8 +8,8 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.registries.ObjectHolder;
 
-@Mod.EventBusSubscriber(modid = EwotMain.MODID, bus = Mod.EventBusSubscriber.Bus.MOD)
-@ObjectHolder(EwotMain.MODID)
+@Mod.EventBusSubscriber(modid = EwotMain.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
+@ObjectHolder(EwotMain.MOD_ID)
 public abstract class EwotSoundEvents {
 
     public static final SoundEvent music_disc_strad_remix = null;
@@ -17,7 +17,7 @@ public abstract class EwotSoundEvents {
     @SubscribeEvent
     public static void registerSounds(RegistryEvent.Register<SoundEvent> event) {
         event.getRegistry().registerAll(
-                new SoundEvent(new ResourceLocation(EwotMain.MODID, "music_disc.strad_remix")).setRegistryName("music_disc_strad_remix")
+                new SoundEvent(new ResourceLocation(EwotMain.MOD_ID, "music_disc.strad_remix")).setRegistryName("music_disc_strad_remix")
         );
     }
 

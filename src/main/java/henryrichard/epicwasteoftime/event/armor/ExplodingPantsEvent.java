@@ -7,14 +7,15 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.DamageSource;
-import net.minecraft.util.math.Vec3d;
+import net.minecraft.util.math.vector.Vector3d;
 import net.minecraft.world.Explosion;
+import net.minecraft.world.ExplosionContext;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.event.entity.living.LivingHurtEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 
-@Mod.EventBusSubscriber(modid = EwotMain.MODID, bus = Mod.EventBusSubscriber.Bus.FORGE, value = {Dist.CLIENT})
+@Mod.EventBusSubscriber(modid = EwotMain.MOD_ID, bus = Mod.EventBusSubscriber.Bus.FORGE, value = {Dist.CLIENT})
 public abstract class ExplodingPantsEvent {
 
     @SuppressWarnings("ConstantConditions")
@@ -26,9 +27,11 @@ public abstract class ExplodingPantsEvent {
             if (legs.getItem() == EwotArmor.exploding_pants) {
                 event.setCanceled(true);
                 legs.damageItem(Integer.MAX_VALUE, livingEntity, e -> e.sendBreakAnimation(EquipmentSlotType.LEGS));
-                livingEntity.attackEntityFrom(DamageSource.FIREWORKS, Float.MAX_VALUE);
-                Vec3d pos = livingEntity.getPositionVec();
-                livingEntity.getEntityWorld().createExplosion(livingEntity, pos.x, pos.y, pos.z, 8F, Explosion.Mode.BREAK);
+                Vector3d pos = livingEntity.getPositionVec();
+                Explosion explosion = new Explosion(livingEntity.getEntityWorld(), null, null, null, pos.x, pos.y, pos.z, 8F, false, Explosion.Mode.BREAK);
+                explosion.doExplosionA();
+                livingEntity.attackEntityFrom(DamageSource.causeExplosionDamage(explosion), Float.MAX_VALUE);
+                explosion.doExplosionB(true);
                 
             }
         }

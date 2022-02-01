@@ -10,8 +10,8 @@ import net.minecraftforge.registries.ObjectHolder;
 
 import static net.minecraft.item.Rarity.*;
 
-@Mod.EventBusSubscriber(modid = EwotMain.MODID, bus = Mod.EventBusSubscriber.Bus.MOD)
-@ObjectHolder(EwotMain.MODID)
+@Mod.EventBusSubscriber(modid = EwotMain.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
+@ObjectHolder(EwotMain.MOD_ID)
 public abstract class EwotItems {
 
     public static final Item amethyst = null;

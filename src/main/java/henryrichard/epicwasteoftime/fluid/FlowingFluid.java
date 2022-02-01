@@ -1,7 +1,7 @@
 package henryrichard.epicwasteoftime.fluid;
 
 import net.minecraft.fluid.Fluid;
-import net.minecraft.fluid.IFluidState;
+import net.minecraft.fluid.FluidState;
 import net.minecraft.state.StateContainer;
 import net.minecraft.world.IWorldReader;
 import net.minecraftforge.fluids.ForgeFlowingFluid;
@@ -30,12 +30,12 @@ public abstract class FlowingFluid extends ForgeFlowingFluid {
         }
 
         @Override
-        public boolean isSource(IFluidState state) {
+        public boolean isSource(FluidState state) {
             return true;
         }
 
         @Override
-        public int getLevel(IFluidState state) {
+        public int getLevel(FluidState state) {
             return 8;
         }
     }
@@ -47,18 +47,18 @@ public abstract class FlowingFluid extends ForgeFlowingFluid {
         }
 
         @Override
-        protected void fillStateContainer(StateContainer.Builder<Fluid, IFluidState> builder) {
+        protected void fillStateContainer(StateContainer.Builder<Fluid, FluidState> builder) {
             super.fillStateContainer(builder);
             builder.add(LEVEL_1_8);
         }
 
         @Override
-        public boolean isSource(IFluidState state) {
+        public boolean isSource(FluidState state) {
             return false;
         }
 
         @Override
-        public int getLevel(IFluidState state) {
+        public int getLevel(FluidState state) {
             return state.get(LEVEL_1_8);
         }
     }

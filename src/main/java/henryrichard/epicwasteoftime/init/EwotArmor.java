@@ -17,7 +17,6 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.registries.ObjectHolder;
 
 import javax.annotation.Nullable;
-import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
@@ -26,8 +25,8 @@ import static net.minecraft.inventory.EquipmentSlotType.LEGS;
 import static net.minecraft.inventory.EquipmentSlotType.CHEST;
 import static net.minecraft.inventory.EquipmentSlotType.HEAD;
 
-@Mod.EventBusSubscriber(modid = EwotMain.MODID, bus = Mod.EventBusSubscriber.Bus.MOD)
-@ObjectHolder(EwotMain.MODID)
+@Mod.EventBusSubscriber(modid = EwotMain.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
+@ObjectHolder(EwotMain.MOD_ID)
 public abstract class EwotArmor {
 
     private static final Map<EquipmentSlotType, String> DEFAULT_PART_NAMES = ImmutableMap.of(HEAD, "helmet", CHEST, "chestplate", LEGS, "leggings", FEET, "boots");

@@ -4,8 +4,6 @@ import henryrichard.epicwasteoftime.EwotMain;
 import henryrichard.epicwasteoftime.block.FakeAnvilBlock;
 import henryrichard.epicwasteoftime.init.EwotBlocks;
 import henryrichard.epicwasteoftime.item.weapon.ZwammahItem;
-import net.minecraft.block.Blocks;
-import net.minecraft.block.HorizontalBlock;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.potion.EffectInstance;
@@ -18,7 +16,7 @@ import net.minecraftforge.event.entity.player.AttackEntityEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 
-@Mod.EventBusSubscriber(modid = EwotMain.MODID, bus = Mod.EventBusSubscriber.Bus.FORGE)
+@Mod.EventBusSubscriber(modid = EwotMain.MOD_ID, bus = Mod.EventBusSubscriber.Bus.FORGE)
 public abstract class ZwammahEvent {
 
     @SubscribeEvent
@@ -35,7 +33,8 @@ public abstract class ZwammahEvent {
             event.getPlayer().getHeldItemMainhand().damageItem(1, event.getPlayer(), (holder) -> holder.sendBreakAnimation(EquipmentSlotType.MAINHAND));
 
             event.getPlayer().addPotionEffect(new EffectInstance(Effects.RESISTANCE, 1, 4));
-            event.getPlayer().getEntityWorld().createExplosion(event.getTarget(), DamageSource.causeExplosionDamage(event.getPlayer()), event.getTarget().getPosX(), event.getTarget().getPosY(), event.getTarget().getPosZ(), 2f, true, Explosion.Mode.NONE);
+            //TODO: Fix
+            //event.getPlayer().getEntityWorld().createExplosion(event.getTarget(), DamageSource.causeExplosionDamage(event.getPlayer()), event.getTarget().getPosX(), event.getTarget().getPosY(), event.getTarget().getPosZ(), 2f, true, Explosion.Mode.NONE);
 
             for(int x = -3; x <= 3; x++) {
                 for(int z = -3; z <= 3; z++) {
