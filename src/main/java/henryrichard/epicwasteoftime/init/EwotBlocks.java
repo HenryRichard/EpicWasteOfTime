@@ -1,39 +1,26 @@
 package henryrichard.epicwasteoftime.init;
 
 import henryrichard.epicwasteoftime.EwotMain;
-import henryrichard.epicwasteoftime.block.*;
-import henryrichard.epicwasteoftime.block.CarpetBlock;
-import henryrichard.epicwasteoftime.block.OreBlock;
-import henryrichard.epicwasteoftime.block.SaplingBlock;
-import henryrichard.epicwasteoftime.block.tileentity.AluminumTankBlock;
-import henryrichard.epicwasteoftime.block.tileentity.AluminumTankBlockItem;
-import henryrichard.epicwasteoftime.block.tileentity.CrudePinkiteFurnaceBlock;
-import henryrichard.epicwasteoftime.block.tree.*;
-import net.minecraft.block.*;
-import net.minecraft.block.material.Material;
-import net.minecraft.block.material.MaterialColor;
-import net.minecraft.entity.EntityType;
-import net.minecraft.fluid.FlowingFluid;
-import net.minecraft.item.BlockItem;
-import net.minecraft.item.DyeColor;
-import net.minecraft.item.Item;
-import net.minecraft.item.Rarity;
-import net.minecraft.util.LazyValue;
-import net.minecraftforge.common.PlantType;
-import net.minecraftforge.common.Tags;
-import net.minecraftforge.event.RegistryEvent;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.registries.ObjectHolder;
+import net.minecraft.util.valueproviders.UniformInt;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.OreBlock;
+import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.material.Material;
+import net.minecraft.world.level.material.MaterialColor;
+import net.minecraftforge.registries.DeferredRegister;
+import net.minecraftforge.registries.ForgeRegistries;
+import net.minecraftforge.registries.RegistryObject;
 
-@Mod.EventBusSubscriber(modid = EwotMain.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
-@ObjectHolder(EwotMain.MOD_ID)
+//@Mod.EventBusSubscriber(modid = EwotMain.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
+//@ObjectHolder(EwotMain.MOD_ID)
 public abstract class EwotBlocks {
 
+    public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, EwotMain.MOD_ID);
 
     //Ore Blocks
-    public static final Block amethyst_ore = null;
-    public static final Block endust_ore = null;
+    public static final RegistryObject<Block> AMETHYST_ORE = BLOCKS.register("amethyst_ore", () -> new OreBlock(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.NETHER).requiresCorrectToolForDrops().strength(3.0F), UniformInt.of(3, 7)));
+    public static final RegistryObject<Block> ENDUST_ORE = BLOCKS.register("endust_ore", () -> new OreBlock(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.SAND).requiresCorrectToolForDrops().strength(5.0F, 9.0F), UniformInt.of(1, 6)));
+    /*
     public static final Block aluminum_ore = null;
     public static final Block pinkite_ore = null;
     public static final Block slime_ore = null;
@@ -74,58 +61,63 @@ public abstract class EwotBlocks {
 
     //Technical Blocks
     public static final Block fake_anvil = null;
+     */
 
+    /*
     @SuppressWarnings("ConstantConditions")
     @SubscribeEvent
     public static void registerBlocks(RegistryEvent.Register<Block> event) {
         event.getRegistry().registerAll(
-                new OreBlock(Block.Properties.create(Material.ROCK, MaterialColor.NETHERRACK).hardnessAndResistance(3.0F), 2, 3, 6).setRegistryName("amethyst_ore"),
-                new OreBlock(Block.Properties.create(Material.ROCK, MaterialColor.SAND).hardnessAndResistance(5.0F, 9.0F), 1, 6).setRegistryName("endust_ore"),
-
-                new MetalBlock(Block.Properties.create(Material.ROCK).hardnessAndResistance(3.0F), 1).setRegistryName("aluminum_ore"),
-                new PinkiteMetalBlock(Block.Properties.create(Material.ROCK).hardnessAndResistance(3.0F).setLightLevel((state) -> 9), 1).setRegistryName("pinkite_ore"),
-
-                new SlimeOreBlock(EntityType.SLIME, Block.Properties.create(Material.ROCK).hardnessAndResistance(3.0F).notSolid()).setRegistryName("slime_ore"),
 
 
-                new MetalBlock(Block.Properties.create(Material.IRON, MaterialColor.PURPLE).hardnessAndResistance(5.0F, 6.0F).sound(SoundType.METAL), 2).setRegistryName("amethyst_block"),
-                new MetalBlock(Block.Properties.create(Material.IRON, MaterialColor.CYAN).hardnessAndResistance(5.0F, 6.0F).sound(SoundType.METAL), 2).setRegistryName("endust_block"),
-                new MetalBlock(Block.Properties.create(Material.IRON, MaterialColor.IRON).hardnessAndResistance(5.0F, 6.0F).sound(SoundType.METAL), 1).setRegistryName("aluminum_block"),
-                new PinkiteMetalBlock(Block.Properties.create(Material.IRON, MaterialColor.PINK).hardnessAndResistance(5.0F, 6.0F).sound(SoundType.METAL).setLightLevel((state) -> 9), 1).setRegistryName("pinkite_block"),
-                new MetalBlock(Block.Properties.create(Material.IRON, MaterialColor.LIGHT_BLUE_TERRACOTTA).hardnessAndResistance(4.0F, 5.0F).sound(SoundType.METAL), 2).setRegistryName("unalloyed_endite_block"),
-                new MetalBlock(Block.Properties.create(Material.IRON, MaterialColor.CYAN).hardnessAndResistance(6.0F, 10.0F).sound(SoundType.METAL), 3).setRegistryName("endite_block"),
+                new MetalBlock(BlockBehaviour.Properties.of(Material.STONE).hardnessAndResistance(3.0F), 1).setRegistryName("aluminum_ore"),
+                new PinkiteMetalBlock(BlockBehaviour.Properties.of(Material.STONE).hardnessAndResistance(3.0F).setLightLevel((state) -> 9), 1).setRegistryName("pinkite_ore"),
+
+                new SlimeOreBlock(EntityType.SLIME, BlockBehaviour.Properties.of(Material.STONE).hardnessAndResistance(3.0F).notSolid()).setRegistryName("slime_ore"),
 
 
-                new StrippableLogBlock(new LazyValue<>(() -> (RotatedPillarBlock) stripped_lavaleaf_log), Block.Properties.create(Material.WOOD, MaterialColor.RED_TERRACOTTA).hardnessAndResistance(2.0F).sound(SoundType.WOOD)).setRegistryName("lavaleaf_log"),
-                new RotatedPillarBlock(Block.Properties.create(Material.WOOD, MaterialColor.RED_TERRACOTTA).hardnessAndResistance(2.0F).sound(SoundType.WOOD)).setRegistryName("stripped_lavaleaf_log"),
-                new StrippableLogBlock(new LazyValue<>(() -> (RotatedPillarBlock) stripped_lavaleaf_wood), Block.Properties.create(Material.WOOD, MaterialColor.RED_TERRACOTTA).hardnessAndResistance(2.0F).sound(SoundType.WOOD)).setRegistryName("lavaleaf_wood"),
-                new RotatedPillarBlock(Block.Properties.create(Material.WOOD, MaterialColor.RED_TERRACOTTA).hardnessAndResistance(2.0F).sound(SoundType.WOOD)).setRegistryName("stripped_lavaleaf_wood"),
-                new Block(Block.Properties.create(Material.WOOD, MaterialColor.RED_TERRACOTTA).hardnessAndResistance(2.0F, 3.0F).sound(SoundType.WOOD)).setRegistryName("lavaleaf_planks"),
-                new SlabBlock(Block.Properties.create(Material.WOOD, MaterialColor.RED_TERRACOTTA).hardnessAndResistance(2.0F, 3.0F).sound(SoundType.WOOD)).setRegistryName("lavaleaf_slab"),
-                new StairsBlock(() -> lavaleaf_planks.getDefaultState(), Block.Properties.create(Material.WOOD, MaterialColor.RED_TERRACOTTA).hardnessAndResistance(2.0F, 3.0F).sound(SoundType.WOOD)).setRegistryName("lavaleaf_stairs"),
-                new LeavesBlock(Block.Properties.create(Material.LEAVES, MaterialColor.ORANGE_TERRACOTTA).hardnessAndResistance(0.2F).tickRandomly().sound(SoundType.PLANT).notSolid()).setRegistryName("lavaleaves"),
-                new LavaloggedLeavesBlock(Block.Properties.create(Material.LEAVES, MaterialColor.ORANGE_TERRACOTTA).hardnessAndResistance(0.2F).tickRandomly().sound(SoundType.PLANT).setLightLevel((state) -> 15).notSolid()).setRegistryName("lavalogged_lavaleaves"),
-                new SaplingBlock(new LavaleafTree(), PlantType.NETHER, Tags.Blocks.NETHERRACK::contains, Block.Properties.create(Material.PLANTS).doesNotBlockMovement().tickRandomly().hardnessAndResistance(0f).sound(SoundType.PLANT)).setRegistryName("lavaleaf_sapling"),
+                new MetalBlock(BlockBehaviour.Properties.of(Material.IRON, MaterialColor.PURPLE).hardnessAndResistance(5.0F, 6.0F).sound(SoundType.METAL), 2).setRegistryName("amethyst_block"),
+                new MetalBlock(BlockBehaviour.Properties.of(Material.IRON, MaterialColor.CYAN).hardnessAndResistance(5.0F, 6.0F).sound(SoundType.METAL), 2).setRegistryName("endust_block"),
+                new MetalBlock(BlockBehaviour.Properties.of(Material.IRON, MaterialColor.IRON).hardnessAndResistance(5.0F, 6.0F).sound(SoundType.METAL), 1).setRegistryName("aluminum_block"),
+                new PinkiteMetalBlock(BlockBehaviour.Properties.of(Material.IRON, MaterialColor.PINK).hardnessAndResistance(5.0F, 6.0F).sound(SoundType.METAL).setLightLevel((state) -> 9), 1).setRegistryName("pinkite_block"),
+                new MetalBlock(BlockBehaviour.Properties.of(Material.IRON, MaterialColor.LIGHT_BLUE_TERRACOTTA).hardnessAndResistance(4.0F, 5.0F).sound(SoundType.METAL), 2).setRegistryName("unalloyed_endite_block"),
+                new MetalBlock(BlockBehaviour.Properties.of(Material.IRON, MaterialColor.CYAN).hardnessAndResistance(6.0F, 10.0F).sound(SoundType.METAL), 3).setRegistryName("endite_block"),
 
 
-                new Block(Block.Properties.create(Material.WOOL).hardnessAndResistance(0.8F).sound(SoundType.CLOTH).setLightLevel((state) -> 15)).setRegistryName("glowwool"),
-                new CarpetBlock(DyeColor.YELLOW, Block.Properties.create(Material.CARPET, MaterialColor.SNOW).hardnessAndResistance(0.1F).sound(SoundType.CLOTH).setLightLevel((state) -> 15)).setRegistryName("glowwool_carpet"),
-                new Block(Block.Properties.create(Material.WOOL, MaterialColor.BROWN).hardnessAndResistance(0.8F).sound(SoundType.CLOTH)).setRegistryName("jeb_wool"),
-                new CarpetBlock(DyeColor.BROWN, Block.Properties.create(Material.CARPET, MaterialColor.BROWN).hardnessAndResistance(0.1F).sound(SoundType.CLOTH)).setRegistryName("jeb_carpet"),
-
-                new AluminumTankBlock(Block.Properties.create(Material.IRON, MaterialColor.IRON).hardnessAndResistance(5.0F, 6.0F).sound(SoundType.METAL).notSolid()).setRegistryName("aluminum_tank"),
-
-                new MetalBlock(Block.Properties.create(Material.IRON, MaterialColor.IRON).hardnessAndResistance(5.0F, 6.0F).sound(SoundType.METAL), 1).setRegistryName("crude_pinkite_machine_base"),
-                new CrudePinkiteFurnaceBlock(Block.Properties.create(Material.IRON, MaterialColor.IRON).hardnessAndResistance(5.0F, 6.0F).sound(SoundType.METAL)).setRegistryName("crude_pinkite_furnace"),
-
-
-                new FlowingFluidBlock(() -> (FlowingFluid) EwotFluids.molten_pinkite, Block.Properties.create(Material.LAVA).doesNotBlockMovement().tickRandomly().hardnessAndResistance(100.0F).setLightLevel((state) -> 5).noDrops()).setRegistryName("molten_pinkite"),
+                new StrippableLogBlock(new LazyValue<>(() -> (RotatedPillarBlock) stripped_lavaleaf_log), BlockBehaviour.Properties.of(Material.WOOD, MaterialColor.RED_TERRACOTTA).hardnessAndResistance(2.0F).sound(SoundType.WOOD)).setRegistryName("lavaleaf_log"),
+                new RotatedPillarBlock(BlockBehaviour.Properties.of(Material.WOOD, MaterialColor.RED_TERRACOTTA).hardnessAndResistance(2.0F).sound(SoundType.WOOD)).setRegistryName("stripped_lavaleaf_log"),
+                new StrippableLogBlock(new LazyValue<>(() -> (RotatedPillarBlock) stripped_lavaleaf_wood), BlockBehaviour.Properties.of(Material.WOOD, MaterialColor.RED_TERRACOTTA).hardnessAndResistance(2.0F).sound(SoundType.WOOD)).setRegistryName("lavaleaf_wood"),
+                new RotatedPillarBlock(BlockBehaviour.Properties.of(Material.WOOD, MaterialColor.RED_TERRACOTTA).hardnessAndResistance(2.0F).sound(SoundType.WOOD)).setRegistryName("stripped_lavaleaf_wood"),
+                new Block(BlockBehaviour.Properties.of(Material.WOOD, MaterialColor.RED_TERRACOTTA).hardnessAndResistance(2.0F, 3.0F).sound(SoundType.WOOD)).setRegistryName("lavaleaf_planks"),
+                new SlabBlock(BlockBehaviour.Properties.of(Material.WOOD, MaterialColor.RED_TERRACOTTA).hardnessAndResistance(2.0F, 3.0F).sound(SoundType.WOOD)).setRegistryName("lavaleaf_slab"),
+                new StairsBlock(() -> lavaleaf_planks.getDefaultState(), BlockBehaviour.Properties.of(Material.WOOD, MaterialColor.RED_TERRACOTTA).hardnessAndResistance(2.0F, 3.0F).sound(SoundType.WOOD)).setRegistryName("lavaleaf_stairs"),
+                new LeavesBlock(BlockBehaviour.Properties.of(Material.LEAVES, MaterialColor.ORANGE_TERRACOTTA).hardnessAndResistance(0.2F).tickRandomly().sound(SoundType.PLANT).notSolid()).setRegistryName("lavaleaves"),
+                new LavaloggedLeavesBlock(BlockBehaviour.Properties.of(Material.LEAVES, MaterialColor.ORANGE_TERRACOTTA).hardnessAndResistance(0.2F).tickRandomly().sound(SoundType.PLANT).setLightLevel((state) -> 15).notSolid()).setRegistryName("lavalogged_lavaleaves"),
+                new SaplingBlock(new LavaleafTree(), PlantType.NETHER, Tags.Blocks.NETHERRACK::contains, BlockBehaviour.Properties.of(Material.PLANTS).doesNotBlockMovement().tickRandomly().hardnessAndResistance(0f).sound(SoundType.PLANT)).setRegistryName("lavaleaf_sapling"),
 
 
-                new FakeAnvilBlock(Block.Properties.create(Material.ANVIL, MaterialColor.IRON).hardnessAndResistance(5.0F, 1200.0F).sound(SoundType.ANVIL)).setRegistryName("fake_anvil")
+                new Block(BlockBehaviour.Properties.of(Material.WOOL).hardnessAndResistance(0.8F).sound(SoundType.CLOTH).setLightLevel((state) -> 15)).setRegistryName("glowwool"),
+                new CarpetBlock(DyeColor.YELLOW, BlockBehaviour.Properties.of(Material.CARPET, MaterialColor.SNOW).hardnessAndResistance(0.1F).sound(SoundType.CLOTH).setLightLevel((state) -> 15)).setRegistryName("glowwool_carpet"),
+                new Block(BlockBehaviour.Properties.of(Material.WOOL, MaterialColor.BROWN).hardnessAndResistance(0.8F).sound(SoundType.CLOTH)).setRegistryName("jeb_wool"),
+                new CarpetBlock(DyeColor.BROWN, BlockBehaviour.Properties.of(Material.CARPET, MaterialColor.BROWN).hardnessAndResistance(0.1F).sound(SoundType.CLOTH)).setRegistryName("jeb_carpet"),
+
+                new AluminumTankBlock(BlockBehaviour.Properties.of(Material.IRON, MaterialColor.IRON).hardnessAndResistance(5.0F, 6.0F).sound(SoundType.METAL).notSolid()).setRegistryName("aluminum_tank"),
+
+                new MetalBlock(BlockBehaviour.Properties.of(Material.IRON, MaterialColor.IRON).hardnessAndResistance(5.0F, 6.0F).sound(SoundType.METAL), 1).setRegistryName("crude_pinkite_machine_base"),
+                new CrudePinkiteFurnaceBlock(BlockBehaviour.Properties.of(Material.IRON, MaterialColor.IRON).hardnessAndResistance(5.0F, 6.0F).sound(SoundType.METAL)).setRegistryName("crude_pinkite_furnace"),
+
+
+                new FlowingFluidBlock(() -> (FlowingFluid) EwotFluids.molten_pinkite, BlockBehaviour.Properties.of(Material.LAVA).doesNotBlockMovement().tickRandomly().hardnessAndResistance(100.0F).setLightLevel((state) -> 5).noDrops()).setRegistryName("molten_pinkite"),
+
+
+                new FakeAnvilBlock(BlockBehaviour.Properties.of(Material.ANVIL, MaterialColor.IRON).hardnessAndResistance(5.0F, 1200.0F).sound(SoundType.ANVIL)).setRegistryName("fake_anvil")
+
         );
-    }
 
+    }
+    */
+
+    /*
     @SuppressWarnings("ConstantConditions")
     @SubscribeEvent
     public static void registerItemBlocks(RegistryEvent.Register<Item> event) {
@@ -167,5 +159,6 @@ public abstract class EwotBlocks {
                 new BlockItem(crude_pinkite_furnace, new Item.Properties().group(EwotItemGroups.EWOT_BLOCKS)).setRegistryName("crude_pinkite_furnace")
         );
     }
+     */
 
 }

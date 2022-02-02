@@ -1,25 +1,11 @@
 package henryrichard.epicwasteoftime.client.event;
 
-import henryrichard.epicwasteoftime.EwotMain;
-import henryrichard.epicwasteoftime.client.render.tileentity.AluminumTankTileEntityRenderer;
-import henryrichard.epicwasteoftime.init.EwotTileEntities;
-import net.minecraft.client.renderer.RenderType;
-import net.minecraft.client.renderer.RenderTypeLookup;
-import net.minecraft.util.ResourceLocation;
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
-import net.minecraftforge.client.model.ModelLoaderRegistry;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.client.registry.ClientRegistry;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
-
-import static henryrichard.epicwasteoftime.init.EwotBlocks.*;
-
-@OnlyIn(Dist.CLIENT)
-@Mod.EventBusSubscriber(modid = EwotMain.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
+//@OnlyIn(Dist.CLIENT)
+//@Mod.EventBusSubscriber(modid = EwotMain.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 public abstract class ClientSetupEvent {
 
+    /*
+    //This whole thing may be unnecessary now?
     @SuppressWarnings("ConstantConditions")
     @SubscribeEvent
     public static void doClientStuff(final FMLClientSetupEvent event) {
@@ -44,4 +30,6 @@ public abstract class ClientSetupEvent {
         //Model Loaders
         //ModelLoaderRegistry.registerLoader(new ResourceLocation(EwotMain.MOD_ID, "masked_tool"), MaskedToolModel.Loader.INSTANCE);
     }
+
+     */
 }

@@ -1,14 +1,8 @@
 package henryrichard.epicwasteoftime.util;
 
-import henryrichard.epicwasteoftime.EwotMain;
-import net.minecraft.item.Item;
-import net.minecraft.tags.ITag;
-import net.minecraft.tags.ItemTags;
-import net.minecraft.tags.Tag;
-import net.minecraft.util.ResourceLocation;
-
 public abstract class EwotTags {
 
+    /*
     public static abstract class Items {
 
         public static final ITag.INamedTag<Item> LAVALEAF_LOGS = tag(EwotMain.MOD_ID, "lavaleaf_logs");
@@ -53,4 +47,5 @@ public abstract class EwotTags {
     public static abstract class Blocks {
 
     }
+     */
 }

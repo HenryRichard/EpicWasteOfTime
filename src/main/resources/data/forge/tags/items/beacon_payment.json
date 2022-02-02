@@ -1,9 +1,0 @@
-{
-  "replace": false,
-  "values": [
-    "#forge:gems/amethyst",
-    "#forge:ingots/aluminum",
-    "#forge:ingots/pinkite",
-    "#forge:ingots/endite"
-  ]
-}

@@ -1,20 +1,9 @@
 package henryrichard.epicwasteoftime.integration.jei;
 
-import henryrichard.epicwasteoftime.EwotMain;
-import mezz.jei.api.IModPlugin;
-import mezz.jei.api.JeiPlugin;
-import mezz.jei.api.registration.IRecipeRegistration;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
-import net.minecraft.tags.Tag;
-import net.minecraft.util.ResourceLocation;
+//@JeiPlugin
+public class EwotJEI {// implements IModPlugin {
 
-import java.util.*;
-import java.util.stream.Collectors;
-
-@JeiPlugin
-public class EwotJEI implements IModPlugin {
-
+    /*
     @Override
     public ResourceLocation getPluginUid() {
         return new ResourceLocation(EwotMain.MOD_ID, "ewotjei");
@@ -24,7 +13,6 @@ public class EwotJEI implements IModPlugin {
     public void registerRecipes(IRecipeRegistration registration) {
         EwotMain.LOGGER.info("EWOT JEI plugin is working!");
 
-        /*
         //Anvil stuff - kinda janky, not a big fan of how it turned out
         //Will probably rework later
         List<Object> anvilRecipes = new ArrayList<>();
@@ -192,10 +180,10 @@ public class EwotJEI implements IModPlugin {
         }
 
         registration.addRecipes(anvilRecipes, VanillaRecipeCategoryUid.ANVIL);
-         */
     }
 
     private List<ItemStack> listFromTag(Tag<Item> tag) {
         return tag.getAllElements().stream().map(ItemStack::new).collect(Collectors.toList());
     }
+    */
 }

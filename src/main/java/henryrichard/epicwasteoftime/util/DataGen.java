@@ -1,36 +1,13 @@
 package henryrichard.epicwasteoftime.util;
 
-import henryrichard.epicwasteoftime.EwotMain;
-import henryrichard.epicwasteoftime.init.EwotBlocks;
-import henryrichard.epicwasteoftime.init.EwotItems;
-import henryrichard.epicwasteoftime.init.EwotRecipes;
-import henryrichard.epicwasteoftime.init.EwotTools;
-import net.minecraft.advancements.criterion.EnterBlockTrigger;
-import net.minecraft.advancements.criterion.InventoryChangeTrigger;
-import net.minecraft.advancements.criterion.ItemPredicate;
-import net.minecraft.block.Blocks;
-import net.minecraft.data.*;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.Items;
-import net.minecraft.item.crafting.Ingredient;
-import net.minecraft.item.crafting.SpecialRecipeSerializer;
-import net.minecraft.tags.ItemTags;
-import net.minecraft.tags.Tag;
-import net.minecraft.util.IItemProvider;
-import net.minecraft.util.ResourceLocation;
-import net.minecraftforge.common.Tags;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.common.ObfuscationReflectionHelper;
-import net.minecraftforge.fml.event.lifecycle.GatherDataEvent;
 
-import java.util.Iterator;
-import java.util.function.Consumer;
+import henryrichard.epicwasteoftime.EwotMain;
+import net.minecraftforge.fml.common.Mod;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, modid = EwotMain.MOD_ID)
 public abstract class DataGen {
 
+    /*
     @SubscribeEvent
     public static void gatherData(GatherDataEvent event) {
         DataGenerator generator = event.getGenerator();
@@ -48,9 +25,7 @@ public abstract class DataGen {
             super(generatorIn);
         }
 
-        /**
-         * Registers all recipes to the given consumer.
-         */
+        //Registers all recipes to the given consumer.
         @Override
         protected void registerRecipes(Consumer<IFinishedRecipe> consumer) {
 
@@ -284,7 +259,7 @@ public abstract class DataGen {
                     EwotTools.golden_spadaxe,
                     EwotTools.golden_mattock
             );
-            
+
         }
 
         private void addSlabAndStairs(Consumer<IFinishedRecipe> consumer, String name, Ingredient material, String triggerName, Ingredient trigger, String group, String path, IItemProvider slab, IItemProvider stairs) {
@@ -343,7 +318,7 @@ public abstract class DataGen {
 
             addOreRecipes(name, ore, ingot, block, ingotResult, blockResult, consumer);
         }
-        
+
         //Adds all the tools - vanilla and new
         private void addFullToolSet(Consumer<IFinishedRecipe> consumer, String name, Ingredient material, IItemProvider sword, IItemProvider shovel, IItemProvider pickaxe, IItemProvider axe, IItemProvider hoe, IItemProvider spadaxe, IItemProvider mattock) {
             this.addFullToolSet(consumer, name, material, name, material, sword, shovel, pickaxe, axe, hoe, spadaxe, mattock);
@@ -499,4 +474,5 @@ public abstract class DataGen {
             return this.hasItem(builder.build());
         }
     }
+    */
 }
