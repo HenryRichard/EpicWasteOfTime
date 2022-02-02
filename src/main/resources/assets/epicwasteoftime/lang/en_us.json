@@ -1,12 +1,12 @@
 {
-  "block.epicwasteoftime.amethyst_ore": "Amethyst Ore",
+  "block.epicwasteoftime.pyrivathite_ore": "Pyrivathite Ore",
   "block.epicwasteoftime.endust_ore": "Endust Ore",
   "block.epicwasteoftime.flint_ore": "Flint Ore",
   "block.epicwasteoftime.aluminum_ore": "Aluminum Ore",
   "block.epicwasteoftime.pinkite_ore": "Pinkite Ore",
   "block.epicwasteoftime.slime_ore": "Slime Ore",
 
-  "block.epicwasteoftime.amethyst_block": "Block of Amethyst",
+  "block.epicwasteoftime.pyrivathite_block": "Block of Pyrivathite",
   "block.epicwasteoftime.endust_block": "Block of Endust",
   "block.epicwasteoftime.aluminum_block": "Block of Aluminum",
   "block.epicwasteoftime.pinkite_block": "Block of Pinkite",
@@ -42,8 +42,8 @@
 
 
 
-  "item.epicwasteoftime.amethyst": "Amethyst",
-  "item.epicwasteoftime.amethyst_shard": "Amethyst Shard",
+  "item.epicwasteoftime.pyrivathite": "Pyrivathite",
+  "item.epicwasteoftime.pyrivathite_shard": "Pyrivathite Shard",
   "item.epicwasteoftime.aluminum_ingot": "Aluminum Ingot",
   "item.epicwasteoftime.aluminum_nugget": "Aluminum Nugget",
   "item.epicwasteoftime.pinkite_ingot": "Pinkite Ingot",
@@ -68,15 +68,15 @@
 
 
 
-  "item.epicwasteoftime.amethyst_helmet": "Amethyst Helmet",
-  "item.epicwasteoftime.amethyst_chestplate": "Amethyst Chestplate",
-  "item.epicwasteoftime.amethyst_leggings": "Amethyst Leggings",
-  "item.epicwasteoftime.amethyst_boots": "Amethyst Boots",
+  "item.epicwasteoftime.pyrivathite_helmet": "Pyrivathite Helmet",
+  "item.epicwasteoftime.pyrivathite_chestplate": "Pyrivathite Chestplate",
+  "item.epicwasteoftime.pyrivathite_leggings": "Pyrivathite Leggings",
+  "item.epicwasteoftime.pyrivathite_boots": "Pyrivathite Boots",
 
-  "item.epicwasteoftime.ancient_amethyst_crown": "Ancient Amethyst Crown",
-  "item.epicwasteoftime.ancient_amethyst_chestplate": "Ancient Amethyst Chainmail Chestplate",
-  "item.epicwasteoftime.ancient_amethyst_leggings": "Ancient Amethyst Chainmail Leggings",
-  "item.epicwasteoftime.ancient_amethyst_boots": "Ancient Amethyst Chainmail Boots",
+  "item.epicwasteoftime.ancient_pyrivathite_crown": "Ancient Pyrivathite Crown",
+  "item.epicwasteoftime.ancient_pyrivathite_chestplate": "Ancient Pyrivathite Chainmail Chestplate",
+  "item.epicwasteoftime.ancient_pyrivathite_leggings": "Ancient Pyrivathite Chainmail Leggings",
+  "item.epicwasteoftime.ancient_pyrivathite_boots": "Ancient Pyrivathite Chainmail Boots",
 
   "item.epicwasteoftime.golden_chainmail_helmet": "Golden Chainmail Helmet",
   "item.epicwasteoftime.golden_chainmail_chestplate": "Golden Chainmail Chestplate",
@@ -107,20 +107,20 @@
 
   "item.epicwasteoftime.exploding_pants": "Exploding Pants",
 
-  "item.epicwasteoftime.legendary_amethyst_super_pants": "Legendary Amethyst Super Pants",
-  "item.epicwasteoftime.legendary_amethyst_super_pants.desc": "Aww, that's rad!",
+  "item.epicwasteoftime.legendary_pyrivathite_super_pants": "Legendary Pyrivathite Super Pants",
+  "item.epicwasteoftime.legendary_pyrivathite_super_pants.desc": "Aww, that's rad!",
 
 
 
   "item.epicwasteoftime.golden_bow": "Golden Bow",
 
-  "item.epicwasteoftime.amethyst_sword": "Amethyst Sword",
-  "item.epicwasteoftime.amethyst_shovel": "Amethyst Shovel",
-  "item.epicwasteoftime.amethyst_pickaxe": "Amethyst Pickaxe",
-  "item.epicwasteoftime.amethyst_axe": "Amethyst Axe",
-  "item.epicwasteoftime.amethyst_hoe": "Amethyst Hoe",
-  "item.epicwasteoftime.amethyst_spadaxe": "Amethyst Spadaxe",
-  "item.epicwasteoftime.amethyst_mattock": "Amethyst Mattock",
+  "item.epicwasteoftime.pyrivathite_sword": "Pyrivathite Sword",
+  "item.epicwasteoftime.pyrivathite_shovel": "Pyrivathite Shovel",
+  "item.epicwasteoftime.pyrivathite_pickaxe": "Pyrivathite Pickaxe",
+  "item.epicwasteoftime.pyrivathite_axe": "Pyrivathite Axe",
+  "item.epicwasteoftime.pyrivathite_hoe": "Pyrivathite Hoe",
+  "item.epicwasteoftime.pyrivathite_spadaxe": "Pyrivathite Spadaxe",
+  "item.epicwasteoftime.pyrivathite_mattock": "Pyrivathite Mattock",
 
   "item.epicwasteoftime.pinkite_sword": "Pinkite Sword",
   "item.epicwasteoftime.pinkite_shovel": "Pinkite Shovel",

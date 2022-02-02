@@ -18,7 +18,7 @@ public abstract class EwotBlocks {
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, EwotMain.MOD_ID);
 
     //Ore Blocks
-    public static final RegistryObject<Block> AMETHYST_ORE = BLOCKS.register("amethyst_ore", () -> new OreBlock(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.NETHER).requiresCorrectToolForDrops().strength(3.0F), UniformInt.of(3, 7)));
+    public static final RegistryObject<Block> PYRIVATHITE_ORE = BLOCKS.register("pyrivathite_ore", () -> new OreBlock(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.NETHER).requiresCorrectToolForDrops().strength(3.0F), UniformInt.of(3, 7)));
     public static final RegistryObject<Block> ENDUST_ORE = BLOCKS.register("endust_ore", () -> new OreBlock(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.SAND).requiresCorrectToolForDrops().strength(5.0F, 9.0F), UniformInt.of(1, 6)));
     /*
     public static final Block aluminum_ore = null;

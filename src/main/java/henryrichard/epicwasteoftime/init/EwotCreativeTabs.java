@@ -16,7 +16,7 @@ public abstract class EwotCreativeTabs extends CreativeModeTab {
         @OnlyIn(Dist.CLIENT)
         @Override
         public ItemStack makeIcon() {
-            return new ItemStack(EwotBlocks.AMETHYST_ORE.get());
+            return new ItemStack(EwotBlocks.PYRIVATHITE_ORE.get());
         }
     };
 
@@ -24,7 +24,7 @@ public abstract class EwotCreativeTabs extends CreativeModeTab {
         @OnlyIn(Dist.CLIENT)
         @Override
         public ItemStack makeIcon() {
-            return new ItemStack(EwotItems.AMETHYST.get());
+            return new ItemStack(EwotItems.PYRIVATHITE.get());
         }
     };
     /*

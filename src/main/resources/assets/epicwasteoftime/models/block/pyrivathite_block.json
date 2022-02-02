@@ -1,5 +1,5 @@
 {   "parent": "block/cube_all",
     "textures": {
-        "all": "epicwasteoftime:block/endust_ore"
+        "all": "epicwasteoftime:block/pyrivathite_block"
     }
 }
