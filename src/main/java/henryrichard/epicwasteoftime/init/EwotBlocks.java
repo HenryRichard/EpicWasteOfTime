@@ -1,10 +1,13 @@
 package henryrichard.epicwasteoftime.init;
 
 import henryrichard.epicwasteoftime.EwotMain;
+import net.minecraft.core.BlockPos;
 import net.minecraft.util.valueproviders.UniformInt;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.OreBlock;
+import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.material.Material;
 import net.minecraft.world.level.material.MaterialColor;
 import net.minecraftforge.registries.DeferredRegister;
@@ -20,7 +23,13 @@ public abstract class EwotBlocks {
     //Ore Blocks
     public static final RegistryObject<Block> PYRIVATHITE_ORE = BLOCKS.register("pyrivathite_ore", () -> new OreBlock(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.NETHER).requiresCorrectToolForDrops().strength(3.0F), UniformInt.of(3, 7)));
     public static final RegistryObject<Block> ENDUST_ORE = BLOCKS.register("endust_ore", () -> new OreBlock(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.SAND).requiresCorrectToolForDrops().strength(5.0F, 9.0F), UniformInt.of(1, 6)));
+
+    //Material Blocks
+    public static final RegistryObject<Block> PYRIVATHITE_BLOCK = BLOCKS.register("pyrivathite_block", () -> new GlassBlock(BlockBehaviour.Properties.of(Material.METAL, MaterialColor.COLOR_ORANGE).sound(EwotSoundEvents.Types.PYRIVATHITE).requiresCorrectToolForDrops().strength(5.0F, 6.0F).noOcclusion().isValidSpawn(EwotBlocks::never).isRedstoneConductor(EwotBlocks::never).isSuffocating(EwotBlocks::never).isViewBlocking(EwotBlocks::never)));
+    public static final RegistryObject<Block> ENDUST_BLOCK = BLOCKS.register("endust_block", () -> new Block(BlockBehaviour.Properties.of(Material.METAL, MaterialColor.COLOR_CYAN).sound(SoundType.METAL).requiresCorrectToolForDrops().strength(5.0F, 6.0F)));
+
     /*
+
     public static final Block aluminum_ore = null;
     public static final Block pinkite_ore = null;
     public static final Block slime_ore = null;
@@ -160,5 +169,22 @@ public abstract class EwotBlocks {
         );
     }
      */
+
+    //Copy-pasted from Blocks.java; maybe an AT would've been better?
+    private static Boolean never(BlockState state, BlockGetter getter, BlockPos pos, EntityType<?> entityType) {
+        return false;
+    }
+
+    private static Boolean never(BlockState state, BlockGetter getter, BlockPos pos) {
+        return false;
+    }
+
+    private static Boolean always(BlockState state, BlockGetter getter, BlockPos pos, EntityType<?> entityType) {
+        return true;
+    }
+
+    private static Boolean always(BlockState state, BlockGetter getter, BlockPos pos) {
+        return true;
+    }
 
 }

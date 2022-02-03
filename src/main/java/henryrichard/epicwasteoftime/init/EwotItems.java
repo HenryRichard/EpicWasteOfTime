@@ -19,12 +19,17 @@ public abstract class EwotItems {
 
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, EwotMain.MOD_ID);
 
+    public static final RegistryObject<Item> PYRIVATHITE = ITEMS.register("pyrivathite", () -> new Item(new Item.Properties().tab(EwotCreativeTabs.EWOT_ITEMS)));
+    public static final RegistryObject<Item> ENDUST = ITEMS.register("endust", () -> new Item(new Item.Properties().tab(EwotCreativeTabs.EWOT_ITEMS)));
+
+    // BlockItems
     public static final RegistryObject<Item> PYRIVATHITE_ORE = registerBlock("pyrivathite_ore", EwotBlocks.PYRIVATHITE_ORE);
     public static final RegistryObject<Item> ENDUST_ORE = registerBlock("endust_ore", EwotBlocks.ENDUST_ORE);
 
-    public static final RegistryObject<Item> PYRIVATHITE = ITEMS.register("pyrivathite", () -> new Item(new Item.Properties().tab(EwotCreativeTabs.EWOT_ITEMS)));
+    public static final RegistryObject<Item> PYRIVATHITE_BLOCK = registerBlock("pyrivathite_block", EwotBlocks.PYRIVATHITE_BLOCK);
+    public static final RegistryObject<Item> ENDUST_BLOCK = registerBlock("endust_block", EwotBlocks.ENDUST_BLOCK);
 
-    public static final RegistryObject<Item> ENDUST = ITEMS.register("endust", () -> new Item(new Item.Properties().tab(EwotCreativeTabs.EWOT_ITEMS)));;
+
     /*
     public static final Item ALUMINUM_INGOT = null;
     public static final Item ALUMINUM_NUGGET = null;

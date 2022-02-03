@@ -1,11 +1,50 @@
 {
   "music_disc.strad_remix": {
-    "category": "record",
     "sounds": [
       {
         "name": "epicwasteoftime:music_disc/strad_remix",
         "stream": true
       }
     ]
+  },
+  "block.pyrivathite_block.break": {
+    "sounds": [
+      "epicwasteoftime:block/pyrivathite/break1",
+      "epicwasteoftime:block/pyrivathite/break2"
+    ],
+    "subtitle": "subtitles.block.generic.break"
+  },
+  "block.pyrivathite_block.fall": {
+    "sounds": [
+      "epicwasteoftime:block/pyrivathite/step1",
+      "epicwasteoftime:block/pyrivathite/step2",
+      "epicwasteoftime:block/pyrivathite/step3",
+      "epicwasteoftime:block/pyrivathite/step4"
+    ]
+  },
+  "block.pyrivathite_block.hit": {
+    "sounds": [
+      "epicwasteoftime:block/pyrivathite/hit1",
+      "epicwasteoftime:block/pyrivathite/hit2",
+      "epicwasteoftime:block/pyrivathite/hit3"
+    ],
+    "subtitle": "subtitles.block.generic.hit"
+  },
+  "block.pyrivathite_block.place": {
+    "sounds": [
+      "epicwasteoftime:block/pyrivathite/hit1",
+      "epicwasteoftime:block/pyrivathite/hit2",
+      "epicwasteoftime:block/pyrivathite/hit3"
+    ],
+    "subtitle": "subtitles.block.generic.place"
+  },
+  "block.pyrivathite_block.step": {
+    "sounds": [
+      "epicwasteoftime:block/pyrivathite/step1",
+      "epicwasteoftime:block/pyrivathite/step2",
+      "epicwasteoftime:block/pyrivathite/step3",
+      "epicwasteoftime:block/pyrivathite/step4"
+    ],
+    "subtitle": "subtitles.block.generic.footsteps"
   }
 }

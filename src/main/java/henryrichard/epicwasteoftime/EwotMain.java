@@ -2,6 +2,7 @@ package henryrichard.epicwasteoftime;
 
 import henryrichard.epicwasteoftime.init.EwotBlocks;
 import henryrichard.epicwasteoftime.init.EwotItems;
+import henryrichard.epicwasteoftime.init.EwotSoundEvents;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
@@ -21,6 +22,7 @@ public class EwotMain {
     public EwotMain() {
         EwotBlocks.BLOCKS.register(FMLJavaModLoadingContext.get().getModEventBus());
         EwotItems.ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
+        EwotSoundEvents.SOUND_EVENTS.register(FMLJavaModLoadingContext.get().getModEventBus());
     }
 
     @SuppressWarnings("ConstantConditions")
